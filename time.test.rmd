@@ -1,0 +1,59 @@
+---
+title: "USGS_workingwithdata"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library("lubridate")
+library("ggplot2")
+library("dplyr")
+
+options(stringsAsFactors = FALSE)
+
+```
+
+
+```{r load-data-files}
+dyfi <- read.csv("data/dyfi/dyfi_20140101_20141231.csv")
+shakemap <- read.csv("data/shakemap/shakemap_20140101_20141231.csv")
+twitter <- read.csv("data/twitter/eq.csv")
+
+```
+
+
+```{r format-dates}
+dyfi$time <- strptime(dyfi$time, "%Y-%m-%dT%H:%M:%OSZ")
+shakemap$time <- strptime(shakemap$time, "%Y-%m-%dT%H:%M:%OSZ")
+twitter$Timestamp <- strptime(twitter$Timestamp, "%Y-%m-%d %H:%M:%S %z")
+```
+
+```{r mk-dataframes}
+dyfi_df <-data.frame(dyfi)
+shakemap_df <-data.frame(shakemap)
+twitter_df <- data.frame(twitter)
+```
+
+```{r subset-twitter}
+twitter__sub_df <- subset(twitter_df, twitter_df$Timestamp >= as.POSIXct('2014-01-01 0:00:00') & twitter_df$Timestamp <= as.POSIXct('2014-12-31 12:59:59') )
+
+# save subset 2014 twitter df to drive
+# write.csv(twitter__sub_df, "eq.project/data/twitter/twitter_20140101_20141231.csv")
+```
+
+
+```{r histograms}
+
+hist(dyfi_df$time, "days", freq = TRUE)
+hist(shakemap$time, "days", freq = TRUE)
+hist(twitter__sub_df$Timestamp, "days", freq = TRUE)
+
+```
+
+```{r}
+
+
+
+```
+
