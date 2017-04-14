@@ -1,0 +1,166 @@
+---
+title: "twitter_data_map_test"
+date: "4/12/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+
+# load libraries
+library(tidyverse)
+library(stringr)
+library(dplyr)
+library(readr)
+library(chunked)
+library(ff)
+library(maps)
+library(ggmap)
+library(lubridate)
+library(gsheet)
+
+options(stringsAsFactors = TRUE)
+```
+
+Napa earthquake occurred on 2014-08-24 @ 10:20:44 UTC  
+Napa valley coordinates 38.5025? N, 122.2654? W
+
+
+
+```{r}
+# full subset plotted on US-ish map
+
+# load data
+twitter<- read.csv("data/twitter/napa_subset.csv")
+
+# split coordinates into two columns and remove special characters
+twitter$lon <- sapply(strsplit(as.character(twitter$Coordinates),','), "[", 1)
+twitter$lon <- (sub('^\\[', '', twitter$lon))
+twitter$lat <- sapply(strsplit(as.character(twitter$Coordinates),','), "[", 2)
+twitter$lat <- (sub(']$', '', twitter$lat))
+
+# cast strings as num
+twitter$lon <-as.numeric(twitter$lon)
+twitter$lat <-as.numeric(twitter$lat)
+
+# get world map
+world_map <- get_map(location = "world", 
+                     source = "google",
+                     maptype = "terrain", 
+                     crop = FALSE,
+                     zoom = 3)
+
+# plot map and tweets
+ggmap(world_map) +
+  geom_point(data = twitter, 
+             aes(x = lon, 
+                 y = lat,
+                 fill = "red",
+                 alpha = 0.2),
+             size = 1, 
+             shape = 19) +
+  guides(fill = FALSE, 
+         alpha = FALSE, 
+         size = FALSE)
+```
+
+
+
+
+```{r}
+
+# Subset - keyword = napa subsetted by tweets between 8/23/2014 and 8/26/2014
+
+# load data
+# twitter <- read.csv("data/twitter/napa_subset.csv")
+
+# split coordinates into two columns and remove special characters
+twitter$lon <- sapply(strsplit(as.character(twitter$Coordinates),','), "[", 1) 
+twitter$lon <- (sub('^\\[', '', twitter$lon)) %>% as.numeric(twitter$lon)
+twitter$lat <- sapply(strsplit(as.character(twitter$Coordinates),','), "[", 2)
+twitter$lat <- (sub(']$', '', twitter$lat))
+
+# cast strings as num
+twitter$lon <-as.numeric(twitter$lon)
+twitter$lat <-as.numeric(twitter$lat)
+
+
+# format Timestamp and subset data 8/23/2014 thru 8/26/2014 (inclusive)
+twitter$Timestamp <- strptime(twitter$Timestamp, "%Y-%m-%d %H:%M:%S %z")
+twitter_3days <- subset(twitter, 
+                        twitter$Timestamp >= as.POSIXct('2014-08-23 0:00:00') &
+                          twitter$Timestamp <= as.POSIXct('2014-08-26 12:59:59') )
+
+# get world map
+world_map <- get_map(location = "world", 
+                     source = "google",
+                     maptype = "terrain", 
+                     crop = FALSE,
+                     zoom = 3)
+
+# plot world map (@ continent level) and tweet locations
+ggmap(world_map) +
+  geom_point(data = twitter_3days, 
+             aes(x = lon, 
+                 y = lat,
+                 fill = "red",
+                 alpha = 0.2),
+             size = 1, 
+             shape = 19) +
+  guides(fill = FALSE, 
+         alpha = FALSE, 
+         size = FALSE)
+```
+
+
+```{r}
+
+twitter_3days_napaArea <- subset(twitter_3days, 
+                        twitter_3days$lon <= -120 &
+                          twitter_3days$lon >= -125)
+
+# plot world map (@ continent level) and tweet locations
+cal_map <- get_map(location = "california", 
+                     source = "google",
+                     maptype = "terrain", 
+                     crop = FALSE,
+                     zoom = 6)
+
+ggmap(cal_map) +
+  geom_point(data = twitter_3days_napaArea, 
+             aes(x = lon, 
+                 y = lat,
+                 fill = "red",
+                 alpha = 0.2),
+             size = 1, 
+             shape = 19) +
+  guides(fill = FALSE, 
+         alpha = FALSE, 
+         size = FALSE)
+
+```
+
+```{r}
+shakemap <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1jW3xkU6ck0-wMFbo34pynf82TWkiXpX53vBe9-J_vEc/edit?usp=sharing")
+
+shakemap$time <- strptime(shakemap$time, "%Y-%m-%dT%H:%M:%OSZ")
+
+cal_map <- get_map(location = "california", 
+                     source = "google",
+                     maptype = "terrain", 
+                     crop = FALSE,
+                     zoom = 6)
+
+ggmap(cal_map) +
+  geom_point(data = shakemap, 
+             aes(x = longitude, 
+                 y = latitude,
+                 fill = "red",
+                 colouor = "red"),
+             size = shakemap$mag/2, 
+             shape = 19) +
+  guides(fill = FALSE, 
+         alpha = FALSE, 
+         size = FALSE)
+
+```
