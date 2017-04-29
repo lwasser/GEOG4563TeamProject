@@ -1,5 +1,5 @@
 ---
-title: "make_twitter_file_smaller"
+title: "how_to_set_twitter_time_and_distance"
 author: "Kristin Robinson"
 date: "April 29, 2017"
 output: html_document
