@@ -1,0 +1,57 @@
+---
+title: "twitter_text_analysis"
+author: "Kristin Robinson"
+date: "April 26, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(lubridate)
+library(ggplot2)
+library(dplyr)
+library(readr)
+```
+
+```{r}
+# load data - longitude and latitude already transformed
+twitter_data <- read.csv("data/twitter/twitter_20140824.csv")
+twitter_data$Timestamp<-as.POSIXct(twitter_data$Timestamp)
+twitter_data <- subset(twitter_data, 
+                             twitter_data$Timestamp >= ('2014-08-24 04:20:00') &
+                            twitter_data$Timestamp <= ('2014-08-24 04:29:59') )
+
+
+```
+
+```{r}
+# clean up text and break down tweets by word
+
+library(tidytext)
+library(stringr)
+
+replace_reg <- "https://t.co/[A-Za-z\\d]+|http://[A-Za-z\\d]+|&amp;|&lt;|&gt;|RT|https"
+unnest_reg <- "([^A-Za-z_\\d#@']|'(?![A-Za-z_\\d#@]))"
+
+tidy_tweets <- twitter_data %>%
+  mutate(Text = str_replace_all(Text, replace_reg, "")) %>%
+  unnest_tokens(word, Text, token = "regex", pattern = unnest_reg) %>%
+  filter(!word %in% stop_words$word,
+         str_detect(word, "[a-z]"))
+
+
+```
+
+```{r}
+
+# frequency count of words
+word_count <- tidy_tweets %>% 
+  count(word, sort = TRUE)
+total <- sum(word_count$n)
+word_count$frequency <- word_count$n/total
+
+
+
+```
+

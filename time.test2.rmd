@@ -1,0 +1,124 @@
+---
+title: "USGS_workingwithdata"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library("lubridate")
+library("ggplot2")
+library("dplyr")
+library(tidyverse)
+library(stringr)
+library(readr)
+library(chunked)
+library(ff)
+library(lubridate)
+
+options(stringsAsFactors = FALSE)
+
+```
+
+Napa earthquake August 24, 2014 10:20:44 UTC
+
+```{r dyfi}
+dyfi <- read.csv("data/dyfi/dyfi_df_20140101_20141231.csv")
+dyfi$time <- strptime(dyfi$time, "%Y-%m-%dT%H:%M:%OSZ")
+```
+
+
+```{r shakemap}
+
+# load data
+# shake_data <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1Uo6j9Foa-vwNsAm8eNO56DaXdYqeY_mSOS0DWaPrvoI/edit?usp=sharing")
+# shake_data <- na.omit(shake_data)
+
+shakemap <- read.csv("data/shakemap/stationlist.csv")
+# shakemap$time <- strptime(shakemap$time, "%Y-%m-%dT%H:%M:%OSZ")
+```
+
+```{r twitter}
+twitter <- read.csv("data/twitter/eq.csv")
+
+# format time
+twitter$Timestamp <- strptime(twitter$Timestamp, "%Y-%m-%d %H:%M:%S %z")
+
+# subset data 2014
+twitter_data <- subset(twitter, twitter$Timestamp >= as.POSIXct('2014-01-01 0:00:00') &
+                            twitter$Timestamp <= as.POSIXct('2014-12-31 12:59:59') )
+
+# split coordinates into two columns and remove special characters
+twitter_data$lon <- sapply(strsplit(as.character(twitter_data$Coordinates),','), "[", 1) 
+twitter_data$lon <- (sub('^\\[', '', twitter_data$lon)) %>% as.numeric(twitter_data$lon)
+twitter_data$lat <- sapply(strsplit(as.character(twitter_data$Coordinates),','), "[", 2)
+twitter_data$lat <- (sub(']$', '', twitter_data$lat))
+
+# cast strings as num
+twitter_data$lon <-as.numeric(twitter_data$lon)
+twitter_data$lat <-as.numeric(twitter_data$lat)
+
+# subset data week before and week after eq
+twitter_data3 <- subset(twitter_data, 
+                        twitter_data$Timestamp >= ('2014-08-16 00:00:00') &
+                          twitter_data$Timestamp <= ('2014-09-01 23:59:59') )
+
+```
+
+```{r histograms}
+
+hist(dyfi_df$time, "days", freq = TRUE)
+hist(shakemap$time, "days", freq = TRUE)
+hist(twitter__sub_df$Timestamp, "days", freq = TRUE)
+
+```
+
+```{r shakemap-map}
+shake_data <- na.omit(shakemap)
+
+cal_map <- get_map(location = "california", 
+                     source = "google",
+                     maptype = "terrain", 
+                     crop = FALSE,
+                     zoom = 6)
+
+ggmap(cal_map) +
+  geom_point(data = shake_data, 
+             aes(x = longitude, 
+                 y = latitude,
+                 colour = "red"),
+             size = 1, 
+             shape = 19) +
+  geom_point(data = twitter, 
+             aes(x = lon, 
+                 y = lat,
+                 colour = "blue"),
+             size = 1, 
+             shape = 19) +
+  guides(fill = FALSE, 
+         alpha = FALSE, 
+         size = FALSE)
+```
+
+
+```{r twitter-map}
+# get california map
+cal_map <- get_map(location = "california", 
+                     source = "google",
+                     maptype = "terrain", 
+                     crop = FALSE,
+                     zoom = 6)
+
+# plot twitter and shakemap data
+
+ggmap(cal_map) +
+  geom_point(data = twitter_data3, 
+             aes(x = lon, 
+                 y = lat,
+                 colour = "blue"),
+             size = 1, 
+             shape = 19) +
+  guides(fill = FALSE, 
+         alpha = FALSE, 
+         size = FALSE)
+```
