@@ -19,20 +19,173 @@ library(readr)
 twitter_data <- read.csv("data/twitter_31days.csv")
 twitter_data$Timestamp<-as.POSIXct(twitter_data$Timestamp)
 
+twitter_data <- subset(twitter_data, 
+                             twitter_data$Timestamp >= ('2014-08-24 04:20:44') &
+                            twitter_data$Timestamp <= ('2014-09-24 04:20:43') )
+
 # set eruption date and time
 day1 <- as.Date("2014-08-24")
 hour1 <- as.POSIXct("2014-08-24 04:20:44")
 
 # add columns for elapsed days
-twitter_data$days <- difftime (as.Date(twitter_data$Timestamp), day1, units = "days")
-twitter_data$days2 <- difftime(twitter_data$Timestamp, hour1, units = "days")
+twitter_data$days <- as.numeric(difftime (as.Date(twitter_data$Timestamp), day1, units = "days"))
+twitter_data$days2 <- as.numeric(difftime(twitter_data$Timestamp, hour1, units = "days"))
 
 # add columns for elapsed minutes
-twitter_data$minutes <- difftime(twitter_data$Timestamp, hour1, units = "mins")
-twitter_data$minutes2 <-trunc(twitter_data$minutes, "mins")
+twitter_data$minutes <- as.numeric(difftime(twitter_data$Timestamp, hour1, units = "mins"))
+twitter_data$seconds <- as.numeric(difftime(twitter_data$Timestamp, hour1, units = "secs"))
+
+# twitter_data$minutes2 <-trunc(twitter_data$minutes, "mins")
 ```
 
+```{r summary-stats}
+# summary(twitter_data)
+
 ```
+
+```{r 31day-plots}
+
+# plot no. of tweets by day
+ggplot(twitter_data, aes(Timestamp)) +
+  geom_histogram(bins = 31) +
+  labs(x = "date", y = "number of tweets", title = "NUmber of tweets by day over 31 days")
+
+# plot no. of tweets by distance from epicenter
+ggplot(twitter_data, aes(dist)) +
+  geom_freqpoly(binwidth = 100) +
+  labs(x = "miles from epicenter", y = "number of tweets", title = "Number of tweets over 31 days")
+
+# plot number of tweets by time by distance
+ggplot(twitter_data, aes(x = Timestamp, y = dist)) + 
+  geom_boxplot(aes(group = cut_width(days, 1))) + 
+  labs(title="Number of tweets over 31 days", x = "time", y="distance (miles)")
+
+```
+
+
+```{r 7day-plots}
+
+twitter_data_7 <- subset(twitter_data, 
+                             twitter_data$Timestamp >= ('2014-08-24 04:20:44') &
+                            twitter_data$Timestamp <= ('2014-08-30 04:20:43') )
+
+# plot no. of tweets by day
+ggplot(twitter_data_7, aes(Timestamp)) +
+  geom_histogram(bins = 7) +
+  labs(x = "date", y = "number of tweets", title = "Number of tweets by day over 1 week")
+
+# plot no. of tweets by distance from epicenter
+ggplot(twitter_data_7, aes(dist)) +
+  geom_freqpoly(binwidth = 100) +
+  labs(x = "miles from epicenter", y = "number of tweets", title = "Number of tweets over 1 week")
+
+# plot number of tweets by time by distance
+ggplot(twitter_data_7, aes(x = Timestamp, y = dist)) + 
+  geom_boxplot(aes(group = cut_width(days, 1))) + 
+  labs(title="Number of tweets over 1 week", x = "time", y="distance (miles)")
+
+```
+
+
+```{r 1day-plots}
+
+twitter_data_1 <- subset(twitter_data, 
+                             twitter_data$Timestamp >= ('2014-08-24 04:20:44') &
+                            twitter_data$Timestamp <= ('2014-08-25 04:20:43') )
+
+# plot no. of tweets by day
+ggplot(twitter_data_1, aes(Timestamp)) +
+  geom_histogram(bins = 23) +
+  labs(x = "time", y = "number of tweets", title = "Number of tweets by hour over 1 day")
+
+# plot no. of tweets by distance from epicenter
+ggplot(twitter_data_1, aes(dist)) +
+  geom_freqpoly(binwidth = 100) +
+  labs(x = "miles from epicenter", y = "number of tweets", title = "# of Tweets in the first 24 hours")
+
+# plot number of tweets by time by distance
+ggplot(twitter_data_1, aes(x = Timestamp, y = dist)) + 
+  geom_boxplot(aes(group = cut_width(minutes, 60))) + 
+  labs(title="# of Tweets in the first 24 hours", x = "time", y="distance (miles)")
+
+```
+
+
+```{r 10min-plots}
+
+twitter_data_10min <- subset(twitter_data, 
+                             twitter_data$Timestamp >= ('2014-08-24 04:20:44') &
+                            twitter_data$Timestamp <= ('2014-08-24 04:30:43') )
+
+# plot no. of tweets by day
+ggplot(twitter_data_10min, aes(Timestamp)) +
+  geom_histogram(bins = 9) +
+  labs(x = "time", y = "number of tweets", title = "Number of tweets by min over 10 min")
+
+# plot no. of tweets by distance from epicenter
+ggplot(twitter_data_10min, aes(dist)) +
+  geom_freqpoly(binwidth = 100) +
+  labs(x = "miles from epicenter", y = "number of tweets", title = "# of Tweets in the first 10 min")
+
+# plot number of tweets by time by distance
+ggplot(twitter_data_10min, aes(x = Timestamp, y = dist)) + 
+  geom_boxplot(aes(group = cut_width(minutes, 1))) + 
+  labs(title="# of Tweets in the first 10 min", x = "time", y="distance (miles)")
+
+```
+
+```{r map-tweets}
+# get napa map
+
+library(maps)
+library(ggmap)
+
+
+us_map <- get_map(location = "united states", 
+                     source = "google",
+                     maptype = "terrain", 
+                     crop = FALSE,
+                     zoom = 4)
+
+# plot twitter data
+ggmap(us_map) +
+   geom_point(data = twitter_data_7, 
+             col = "blue", 
+             size = .1,
+             aes(x = lon, 
+                 y = lat),
+             shape = 19) +
+   geom_point(data = twitter_data_1, 
+             col = "red", 
+             size = .1,
+             aes(x = lon, 
+                 y = lat),
+             shape = 19) +
+  geom_point(data = twitter_data_10min, 
+             col = "orange", 
+             size = .1,
+             aes(x = lon, 
+                 y = lat),
+             shape = 19)  +
+  guides(fill = FALSE, 
+         alpha = FALSE, 
+         size = FALSE)
+ 
+
+# plot twitter data
+ggmap(us_map) +
+  geom_point(data = twitter_data_10min, 
+             col = "orange", 
+             size = .1,
+             aes(x = lon, 
+                 y = lat),
+             shape = 19)  +
+  guides(fill = FALSE, 
+         alpha = FALSE, 
+         size = FALSE)
+
+```
+
 
 ```{r}
 # clean up text and break down tweets by word
@@ -48,8 +201,6 @@ tidy_tweets <- twitter_data %>%
   unnest_tokens(word, Text, token = "regex", pattern = unnest_reg) %>%
   filter(!word %in% stop_words$word,
          str_detect(word, "[a-z]"))
-
-
 ```
 
 ```{r}
@@ -62,17 +213,8 @@ word_count$frequency <- word_count$n/total
 
 ```
 
-```{r}
 
-# plot number of tweets by distance from epicenter
-ggplot(twitter_data, aes(dist)) +
-  geom_freqpoly(binwidth = 1) +
-  labs(x = "miles from epicenter", title = "# of Tweets by Distance from Epicenter")
 
-# plot number of tweets by time by distance (distance <= 500 miles)
-ggplot(twitter_data, aes(x = Timestamp, y = dist)) + geom_point() + labs(title="Tweets by distance by time\n(distance < 500 miles)", x = "time", y="distance (miles)")
-
-```
 
 
 

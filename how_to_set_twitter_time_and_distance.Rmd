@@ -31,12 +31,8 @@ twitter_backup <- twitter_data
 # load data - longitude and latitude already transformed)
 twitter_data$Timestamp<-as.POSIXct(twitter_data$Timestamp)
 twitter_data <- subset(twitter_data, 
-                             twitter_data$Timestamp >= ('2014-07-24 04:20:00') &
+                             twitter_data$Timestamp >= ('2014-04-24 04:20:44') &
                             twitter_data$Timestamp <= ('2014-09-24 04:29:59') )
-
-# subset data:  30days +/-from earthquake
-twitter_data <- subset(twitter_data, twitter_data$Timestamp >= as.POSIXct('2014-08-23 0:00:00') &
-                            twitter_data$Timestamp <= as.POSIXct('2014-09-24 12:59:59') )
 
 ## manipulate long & lat into usable form ##
 # split coordinates into two columns and remove special characters
@@ -65,3 +61,23 @@ twitter_data$dist <- twitter_data$dist/m_per_mi
 
 # write.csv(twitter_data, "twitter_31days.csv")
 ```
+
+TODO: 
+ADD CODE FOR ADDING ELAPSED TIME
+TEST WITH FULL DATA SET AND PUT IN R CHUNK
+
+# set eruption date and time
+day1 <- as.Date("2014-08-24")
+hour1 <- as.POSIXct("2014-08-24 04:20:44")
+
+# add columns for elapsed days
+twitter_data$days <- as.numeric(difftime (as.Date(twitter_data$Timestamp), day1, units = "days"))
+twitter_data$days2 <- as.numeric(difftime(twitter_data$Timestamp, hour1, units = "days"))
+
+# add columns for elapsed minutes
+twitter_data$minutes <- as.numeric(difftime(twitter_data$Timestamp, hour1, units = "mins"))
+twitter_data$seconds <- as.numeric(difftime(twitter_data$Timestamp, hour1, units = "secs"))
+
+# twitter_data$minutes2 <-trunc(twitter_data$minutes, "mins")
+
+
