@@ -127,6 +127,14 @@ ggplot(twitter_data_10min, aes(dist)) +
   geom_freqpoly(binwidth = 100) +
   labs(x = "miles from epicenter", y = "number of tweets", title = "# of Tweets in the first 10 min")
 
+# plot no. of tweets by distance from epicenter
+ggplot(twitter_data_10min, aes(dist)) +
+  geom_freqpoly(binwidth = 100) + xlim(0,500) +
+  labs(x = "miles from epicenter", y = "number of tweets", title = "# of Distance of tweets from epicenter in the first 10 min\ntweets < than 500 miles from epicenter")
+
+# plot number of tweets by time by distance (distance <= 500 miles)
+ggplot(twitter_data_10min, aes(dist)) + geom_histogram(bins=25) +xlim(0,100) + labs(title="Tweet distance from epicenter < 100 miles)", x = "distance (miles)", y="# of tweets")
+
 # plot number of tweets by time by distance
 ggplot(twitter_data_10min, aes(x = Timestamp, y = dist)) + 
   geom_boxplot(aes(group = cut_width(minutes, 1))) + 
@@ -196,7 +204,7 @@ library(stringr)
 replace_reg <- "https://t.co/[A-Za-z\\d]+|http://[A-Za-z\\d]+|&amp;|&lt;|&gt;|RT|https"
 unnest_reg <- "([^A-Za-z_\\d#@']|'(?![A-Za-z_\\d#@]))"
 
-tidy_tweets <- twitter_data %>%
+tidy_tweets <- twitter_data_10min %>%
   mutate(Text = str_replace_all(Text, replace_reg, "")) %>%
   unnest_tokens(word, Text, token = "regex", pattern = unnest_reg) %>%
   filter(!word %in% stop_words$word,
@@ -210,6 +218,8 @@ word_count <- tidy_tweets %>%
   count(word, sort = TRUE)
 total <- sum(word_count$n)
 word_count$frequency <- word_count$n/total
+
+
 
 ```
 
