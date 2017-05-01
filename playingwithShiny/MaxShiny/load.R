@@ -60,3 +60,6 @@ tidy_tweets <- twitter_data_10min %>%
          str_detect(word, "[a-z]"))
 
 CaliCen <- readOGR("CaliCensus/Cal_Cnty_RacePop.shp")
+
+
+

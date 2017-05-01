@@ -16,10 +16,6 @@ fluidPage("Ranch Drought", id = "navBar",
                                  leafletOutput("CaliCensus"),
                                  p()
                                ))
-                      # ,
-                      # tabPanel("Twitter Full",
-                      #          fluidPage(
-                      #            leafletOutput("TwitFull")
-                      #          ))
+
           )
 )
