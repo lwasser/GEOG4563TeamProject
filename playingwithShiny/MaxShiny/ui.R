@@ -1,24 +1,25 @@
+library(shiny)
+library(leaflet)
+library(rgdal)
+library(dplyr)
+
+
+
 fluidPage("Ranch Drought", id = "navBar",
           
           
           tabsetPanel(id = "mainPanels",
-                      
-                      ## Instruction panel
-                      # tabPanel("10 Minute Data",
-                      #          fluidRow(
-                      #            leafletOutput("mymap"),
-                      #            p(),
-                      #            actionButton("recalc", "New points")
-                      #            
-                      #          )), 
-                      
+                    
                       tabPanel("Cali Census",
-                               fluidRow(
+                               fluidPage(
 
                                  leafletOutput("CaliCensus"),
                                  p()
-                                 
-                                 
                                ))
+                      # ,
+                      # tabPanel("Twitter Full",
+                      #          fluidPage(
+                      #            leafletOutput("TwitFull")
+                      #          ))
           )
 )
