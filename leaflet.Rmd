@@ -25,6 +25,16 @@ library(stringr)
 # load data - longitude and latitude already transformed
 twitter_data <- read.csv("data/twitter_31days.csv")
 twitter_data$Timestamp<-as.POSIXct(twitter_data$Timestamp)
+## manipulate long & lat into usable form ##
+# split coordinates into two columns and remove special characters
+twitter_data$lon <- sapply(strsplit(as.character(twitter_data$Coordinates),','), "[", 1) 
+twitter_data$lon <- (sub('^\\[', '', twitter_data$lon)) %>% as.numeric(twitter_data$lon)
+twitter_data$lat <- sapply(strsplit(as.character(twitter_data$Coordinates),','), "[", 2)
+twitter_data$lat <- (sub(']$', '', twitter_data$lat))
+
+# cast strings as num
+twitter_data$lon <-as.numeric(twitter_data$lon)
+twitter_data$lat <-as.numeric(twitter_data$lat)
 
 twitter_data <- subset(twitter_data, 
                              twitter_data$Timestamp >= ('2014-08-24 04:20:44') &
@@ -76,11 +86,8 @@ plot(pressure)
 ```{r}
 CalCen <- readOGR("data/CaliCensus/Cal_Cnty_RacePop.shp")
 
-leaflet(CalCen) %>% addProviderTiles(providers$OpenMapSurfer.Roads) %>% addPolygons(color = "#444444", weight = 1, smoothFactor = 0.5,
-    opacity = 1.0, fillOpacity = 0.5,
-    fillColor = ~colorQuantile("YlOrRd", CalCen$Total)(CalCen$Total),
-    highlightOptions = highlightOptions(color = "white", weight = 2,
-      bringToFront = TRUE))
+leaflet(CalCen) %>% addProviderTiles(providers$OpenMapSurfer.Roads) %>% addAwesomeMarkers( clusterOptions = markerClusterOptions()
+,twitter_data_10min, lat=twitter_data_10min$lat, lng=twitter_data_10min$lon) %>% addPolygons(color = "#444444", weight = 1, smoothFactor = 0.5,opacity = 1.0, fillOpacity = 0.5, fillColor = ~colorQuantile("YlOrRd", CalCen$Total)(CalCen$Total), highlightOptions = highlightOptions(color = "white", weight = 2, bringToFront = TRUE))
 ```
 
 
