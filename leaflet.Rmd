@@ -87,7 +87,8 @@ plot(pressure)
 CalCen <- readOGR("data/CaliCensus/Cal_Cnty_RacePop.shp")
 
 leaflet(CalCen) %>% addProviderTiles(providers$OpenMapSurfer.Roads) %>% addAwesomeMarkers( clusterOptions = markerClusterOptions()
-,twitter_data_10min, lat=twitter_data_10min$lat, lng=twitter_data_10min$lon) %>% addPolygons(color = "#444444", weight = 1, smoothFactor = 0.5,opacity = 1.0, fillOpacity = 0.5, fillColor = ~colorQuantile("YlOrRd", CalCen$Total)(CalCen$Total), highlightOptions = highlightOptions(color = "white", weight = 2, bringToFront = TRUE))
+,twitter_data_10min, lat=twitter_data_10min$lat, lng=twitter_data_10min$lon, popup=~twitter_data_10min$Text) %>% addPolygons(color = "#444444", weight = 1, smoothFactor = 0.5,opacity = 1.0, fillOpacity = 0.5, fillColor = ~colorQuantile("YlOrRd", CalCen$Total)(CalCen$Total), popup=paste0("<b>Total County Population: </b>", CalCen$Total)
+,highlightOptions = highlightOptions(color = "white", weight = 2, bringToFront = TRUE))
 ```
 
 
