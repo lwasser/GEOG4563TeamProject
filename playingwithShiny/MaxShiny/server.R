@@ -1,14 +1,10 @@
-library(shiny)
-library(leaflet)
-library(rgdal)
-setwd("~/GitHub/GEOG4563TeamProject/playingwithShiny/MaxShiny")
 
+
+source("load.R", local = TRUE)
 
 function(input, output, session) {
 
-  CaliCen <- {
-      readOGR("CaliCensus/Cal_Cnty_RacePop.shp")
-  }
+
 
   output$CaliCensus <- renderLeaflet({
     leaflet(CaliCen) %>% addProviderTiles(providers$OpenMapSurfer.Roads) %>%
