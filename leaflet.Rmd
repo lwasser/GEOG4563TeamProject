@@ -1,0 +1,32 @@
+---
+title: "playingWithLeaflet"
+author: "Kristin Robinson"
+date: "April 30, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(devtools)
+library(leaflet)
+library(dplyr)
+library(ggplot2)
+library(rjson)
+library(jsonlite)
+```
+
+
+```{r cars}
+leaflet(tidy_tweets) %>%
+  addTiles() %>%
+  addCircleMarkers(lng=~lon, lat=~lat,
+                   popup=~paste0(word))
+```
+
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
