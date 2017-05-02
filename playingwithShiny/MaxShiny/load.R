@@ -1,6 +1,6 @@
 knitr::opts_chunk$set(echo = TRUE)
 options(stringsAsFactors = FALSE)
-#setwd("~/GitHub/GEOG4563TeamProject/playingwithShiny/MaxShiny")
+setwd("~/GitHub/GEOG4563TeamProject/playingwithShiny/MaxShiny")
 library(devtools)
 library(leaflet)
 library(dplyr)
@@ -12,7 +12,9 @@ library(tidytext)
 library(stringr)
 library(shiny)
 library(rgdal)
-
+library(RColorBrewer)
+library(raster)
+library(sp)
 # load data - longitude and latitude already transformed
 twitter_data <- read.csv("data/twitter_31days.csv")
 twitter_data$Timestamp<-as.POSIXct(twitter_data$Timestamp)
@@ -58,8 +60,11 @@ tidy_tweets <- twitter_data_10min %>%
   unnest_tokens(word, Text, token = "regex", pattern = unnest_reg) %>%
   filter(!word %in% stop_words$word,
          str_detect(word, "[a-z]"))
-
+# Read in california census shapefile
 CaliCen <- readOGR("CaliCensus/Cal_Cnty_RacePop.shp")
 
-
+# Read in shakemap raster
+shake_raster <- raster("shakemap/raster/mi_gmpe_inter_std.fit")
+# Set the CRS of the raster file
+crs(shake_raster) <- sp::CRS("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")
 
