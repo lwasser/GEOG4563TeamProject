@@ -44,22 +44,23 @@ shake_sh$GRID_CODE<-as.numeric(shake_sh$GRID_CODE)
 # plot of shapefile
 plot(shake_sh, col=shake_sh$PARAMVALUE,
      main = "South Napa Earthquake Shakemap")
-col_range=c(0,1,2,3,4,5,6,7,8,9,10)
+
+cols <- c("#FFFFFF","#FFFFFF", "#BFCCFF", "#A0E6FF", "#80FFFF", "#7AFF93", "#FFFF00", "#FFC800","#FF9100","#C80000")
 
 # set colors for leaflet plot
-pal <- colorNumeric(palette = "Spectral", reverse = TRUE, range(col_range))
-pal2 <- colorNumeric(palette = ("Spectral"), reverse = TRUE, domain = shake_sh$GRID_CODE)
+pal1 <- colorNumeric(palette = cols, domain = shake_sh$PARAMVALUE)
+pal2 <- colorNumeric(palette = cols, domain = shake_sh$GRID_CODE)
 
 # leaflet plot 
 leaflet(shake_sh) %>% addProviderTiles(providers$OpenMapSurfer.Roads) %>%
-  addPolygons(color = ~pal(GRID_CODE), 
+  addPolygons(color = ~pal2(GRID_CODE), 
               weight = 0, 
               smoothFactor = 0.5,
               opacity = 0, 
               fillOpacity = 0.6, 
-              fillColor = ~pal(PARAMVALUE))%>%
+              fillColor = ~pal1(PARAMVALUE))%>%
   addMarkers(lng = -122.31, lat = 38.22) %>%
-  addLegend(pal = pal, values = ~GRID_CODE,
+  addLegend(pal = pal2, values = ~GRID_CODE,
     title = "MMI")
 
 
