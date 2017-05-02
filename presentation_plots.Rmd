@@ -1,0 +1,139 @@
+---
+title: "Presentation Plots"
+author: "Kristin Robinson"
+date: "May 2, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# work with spatial data; sp package will load with rgdal.
+library(rgdal)
+library(rgeos)
+# for metadata/attributes- vectors or rasters
+library(raster)
+
+library(ggplot2)
+# testing the sf package out for these lessons!
+# library(sf)
+library(RColorBrewer)
+
+library(maps)
+library(ggmap)
+library(dplyr)
+
+library(devtools)
+library(leaflet)
+
+
+options(stringsAsFactors = FALSE)
+```
+
+```{r shakemap-data}
+# load data
+shakemap_data <- read.csv("data/shakemap/shakemap.csv", header=TRUE)
+shakemap_data <- na.omit(shakemap_data)
+
+# load shapefile
+shake_sh <- readOGR(dsn="data/shakemap/shapefile/mi.shp")
+shake_sh$GRID_CODE<-as.numeric(shake_sh$GRID_CODE)
+
+# load raster
+shake_rs <- raster("data/shakemap/raster/mi.fit")
+
+```
+ 
+ Epicenter -123.56, 37.38, -121.05, 39.05
+
+```{r shakemap}
+
+library(sp)
+napa_map <- get_map(location = "Napa, California",
+               source = "google",
+               maptype = "terrain",
+               crop = TRUE,
+               zoom = 8)
+
+
+
+aoi <- as(raster::extent(shake_sh), "SpatialPolygons")
+proj4string(aoi) <- "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+
+  
+
+m <- ggmap(napa_map, extent = "device") + 
+  geom_polygon(aes(x = long, 
+                   y = lat, 
+                   group=id),
+               data = aoi, 
+               color = "blue", 
+               fill = NA,
+               alpha = 1, 
+               size = 1)  + 
+  geom_point(
+    aes(x = -122.31, 
+        y = 38.22, 
+        colour = "darkred"),
+    fill = "darkred",
+    size = 4,
+    alpha=1,
+    shape = 19) +
+  geom_text(aes(x = -122.31, 
+        y = 38.22, label = "Epicenter"), colour = "darkred", hjust = -.2, vjust =.2)
+m +labs(title = "ShakeMap boundary\n 2014 South Napa Earthquake") + 
+  theme(legend.position="none")
+  
+# theme(legend.title=element_blank())+ scale_colour_discrete(
+#                         labels=c("Epicenter"))
+
+```
+
+
+
+```{r shake-leaflet-shape}
+
+# create epicenter icon
+epi <- makeIcon(
+  iconUrl = "http://icons.iconarchive.com/icons/icons-land/vista-map-markers/256/Map-Marker-Ball-Pink-icon.png",
+  iconWidth = 60, iconHeight = 60,
+  iconAnchorX = 0, iconAnchorY = 0)
+
+# set colors for ShakeMap palette
+cols <- c("#FFFFFF","#FFFFFF", "#BFCCFF", "#A0E6FF", "#80FFFF", "#7AFF93", "#FFFF00", "#FFC800","#FF9100","#C80000")
+
+# create palette
+pal1 <- colorNumeric(palette = cols, domain = shake_sh$PARAMVALUE)
+pal2 <- colorNumeric(palette = cols, domain = shake_sh$GRID_CODE)
+
+# plot 
+leaflet(shake_sh) %>% addProviderTiles(providers$OpenMapSurfer.Roads, group = "Base map") %>% fitBounds(-123.56, 37.38, -121.05, 39.05) %>%
+  addPolygons(color = ~pal2(GRID_CODE), 
+              weight = 1, 
+              smoothFactor = 0.5,
+              opacity = .5, 
+              fillOpacity = 0.6, 
+              fillColor = ~pal1(PARAMVALUE),
+              group = "ShakeMap")%>%
+  addMarkers(lng = -122.31, lat = 38.22, group = "Epicenter") %>%
+  addLegend(pal = pal2, values = ~GRID_CODE, position = "bottomright",
+    title = "Intensity") %>%
+  addLayersControl(
+    baseGroups = ("Base map"),
+    overlayGroups= c("ShakeMap", "Epicenter"),
+    options = layersControlOptions(collapsed = FALSE)
+  )
+```
+
+
+
+```{r shake-leaflet-raster}
+
+crs(shake_rs) <- sp::CRS("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")
+pal3 <- colorNumeric((palette = cols), values(shake_rs))
+
+leaflet() %>% addTiles() %>%
+  addRasterImage(shake_rs, colors = pal3, opacity = 0.6) %>%
+  addMarkers(lng = -122.31, lat = 38.22) %>%
+  addLegend(pal = pal3, values = values(shake_rs),
+    title = "Intesity")
+
+```
