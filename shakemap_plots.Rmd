@@ -77,16 +77,22 @@ pal1 <- colorNumeric(palette = cols, domain = shake_sh$PARAMVALUE)
 pal2 <- colorNumeric(palette = cols, domain = shake_sh$GRID_CODE)
 
 # leaflet plot 
-leaflet(shake_sh) %>% addProviderTiles(providers$OpenMapSurfer.Roads) %>%
+leaflet(shake_sh) %>% addProviderTiles(providers$OpenMapSurfer.Roads, group = "Base map") %>% fitBounds(-123.56, 37.38, -121.05, 39.05) %>%
   addPolygons(color = ~pal2(GRID_CODE), 
               weight = 0, 
               smoothFactor = 0.5,
               opacity = 0, 
               fillOpacity = 0.6, 
-              fillColor = ~pal1(PARAMVALUE))%>%
-  addMarkers(lng = -122.31, lat = 38.22) %>%
-  addLegend(pal = pal2, values = ~GRID_CODE,
-    title = "Intensity")
+              fillColor = ~pal1(PARAMVALUE),
+              group = "ShakeMap")%>%
+  addMarkers(lng = -122.31, lat = 38.22, group = "Epicenter") %>%
+  addLegend(pal = pal2, values = ~GRID_CODE, position = "bottomright",
+    title = "Intensity") %>%
+  addLayersControl(
+    baseGroups = ("Base map"),
+    overlayGroups= c("ShakeMap", "Epicenter"),
+    options = layersControlOptions(collapsed = FALSE)
+  )
 
 
 # create a data.frame with the epicenter location
