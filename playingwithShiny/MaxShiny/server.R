@@ -108,10 +108,7 @@ function(input, output, session) {
   
   
   
-  
-  # ggplot(subData(), aes(tp_date_pressed, sigma)) +
-  #   geom_point() +
-  #   scale_x_date(limits = input$date)
+
   
   
   

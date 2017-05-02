@@ -11,11 +11,11 @@ fluidPage(h1("Napa Valley Earthquake", id = "navBar"),
           
           tabsetPanel(id = "mainPanels",
 
-                      # tabPanel("Cali Census",
-                      #          fluidPage(
-                      #            leafletOutput("CaliCensus", width = "100%", height = 700),
-                      #            p()
-                      #          )),
+                      tabPanel("California Census",
+                               fluidPage(
+                                 leafletOutput("CaliCensus", width = "100%", height = 700),
+                                 p()
+                               )),
                       tabPanel("10 Minute Timescale", 
                                fluidPage(
                                  fluidPage(
