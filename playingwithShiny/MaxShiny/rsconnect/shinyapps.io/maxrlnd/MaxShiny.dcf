@@ -3,8 +3,8 @@ title: MaxShiny
 account: maxrlnd
 server: shinyapps.io
 appId: 176960
-bundleId: 810984
+bundleId: 811176
 url: https://maxrlnd.shinyapps.io/MaxShiny/
-when: 1493670498.1366
+when: 1493685125.79619
 asMultiple: FALSE
 asStatic: FALSE
