@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "","X","Tweet.Id","Timestamp","Text","Hashtags","URLS","User.Mentions","In.Reply.To.Tweet.ID","In.Reply.to.User","Retweet_Count","Screen.Name","User.Id","Joined.Twitter","Coordinates","Original.Tweet","lon","lat","epicenlon","epicenlat","dist","days","days2","minutes","seconds"
 "3037",3037,503488821858541568,2014-08-24 04:27:44,"#Temblor♨ M 6.0, 6km NW of American Canyon, California http://t.co/jPjAxuZsMB #Earthquake #Sismo","Temblor, Earthquake, Sismo","http://on.doi.gov/1pt3mcE","",NA,"",0,"TodoTiempo",536561965,"2012-03-25 13:07:44 -0600","[-122.3192, 38.2142]","https://twitter.com/536561965/status/503488821858541568",-122.3192,38.2142,-122.31,38.22,0.641041670486374,0,0.00486111111111111,7,420
 "3038",3038,503489356943069184,2014-08-24 04:29:51,"Quiero contar lo caótico pero Naaa mucha vergüenza xd temblor de mala pata xd","","","",NA,"",0,"Daany_Makarena",117487799,"2010-02-25 11:27:30 -0700","[-71.219432, -32.797419]","https://twitter.com/117487799/status/503489356943069184",-71.219432,-32.797419,-122.31,38.22,5909.29328646567,0,0.00633101851851852,9.11666666666667,547
@@ -2452,3 +2453,7 @@
 "65981",65981,503489517429751808,2014-08-24 04:30:30,"wake up to an earthquake at 3:20am, great.😳😕","","","",NA,"",0,"Nguerrer00",2686800103,"2014-07-28 00:13:55 -0600","[-122.683921, 38.338385]","https://twitter.com/2686800103/status/503489517429751808",-122.683921,38.338385,-122.31,38.22,21.8927568122585,0,0.00678240740740741,9.76666666666667,586
 "65982",65982,503489539004837888,2014-08-24 04:30:35,"Omg, that #earthquake just woke me up! #BayArea","earthquake, BayArea","","",NA,"",0,"DeeCardier",45329678,"2009-06-07 06:19:42 -0600","[-122.266074, 37.555406]","https://twitter.com/45329678/status/503489539004837888",-122.266074,37.555406,-122.31,38.22,46.0330604492126,0,0.00684027777777778,9.85,591
 "65983",65983,503489551650672640,2014-08-24 04:30:38,"My bed was shaking &amp; heard trembling sound outside.  Felt that for a minute #earthquake","earthquake","","",NA,"",0,"MarkBeierly",51953755,"2009-06-28 22:10:39 -0600","[-122.015798, 38.254899]","https://twitter.com/51953755/status/503489551650672640",-122.015798,38.254899,-122.31,38.22,16.1653797382456,0,0.006875,9.9,594
+=======
+"","x"
+"1","twitter_data_10min"
+>>>>>>> 3daf2901d727b3057ba8761a313b539e5861a1bc
