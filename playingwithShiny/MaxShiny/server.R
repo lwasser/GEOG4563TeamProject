@@ -8,10 +8,10 @@ function(input, output, session) {
     leaflet(CaliCen) %>% addProviderTiles(providers$OpenMapSurfer.Roads) %>%
       addAwesomeMarkers(group="Twitter", clusterOptions = markerClusterOptions()
     ,twitter_data_10min, lat=twitter_data_10min$lat, lng=twitter_data_10min$lon,
-    popup=~twitter_data_10min$Text) %>%
+    popup=paste0("<b>Tweet: </b>",twitter_data_10min$Text, "<br><b>Time: </b></br>", twitter_data_10min$Timestamp)) %>%
       addPolygons(group = "Census", color = "#444444", weight = 1,
     smoothFactor = 0.5,opacity = 1.0, fillOpacity = 0.5, fillColor = ~colorQuantile("YlOrRd",
-   CaliCen$Total)(CaliCen$Total), popup=paste0("<b>Total County Population: </b>", CaliCen$Total)
+   CaliCen$Total)(CaliCen$Total), popup=paste0("<b>County: </b>", CaliCen$NAMELSAD10,"<br><b>Total County Population: </b></br>", CaliCen$Total)
   ,highlightOptions = highlightOptions(color = "white", weight = 2, bringToFront = TRUE)) %>% 
   fitBounds(-123.56, 37.38, -121.06, 39.04) %>%
   addLayersControl(
