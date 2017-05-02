@@ -1,5 +1,5 @@
 
-
+source("load.R", local = TRUE)
 
 
 function(input, output, session) {
