@@ -34,26 +34,33 @@ shakemap_data <- na.omit(shakemap_data)
 ```
 
 
-```{r cars}
-# Import a polygon shapefile
+```{r }
+# Import shapefules
 
 shake_sh <- readOGR(dsn="data/shakemap/shapefile/mi.shp")
 shake_rs <- raster("data/shakemap/raster/mi.fit")
 shake_sh$GRID_CODE<-as.numeric(shake_sh$GRID_CODE)
 
+# plot of shapefile
 plot(shake_sh, col=shake_sh$PARAMVALUE,
      main = "South Napa Earthquake Shakemap")
+col_range=c(0,1,2,3,4,5,6,7,8,9,10)
 
-pal <- colorNumeric(palette = "Spectral", reverse = TRUE, domain = shake_sh$PARAMVALUE)
+# set colors for leaflet plot
+pal <- colorNumeric(palette = "Spectral", reverse = TRUE, range(col_range))
 pal2 <- colorNumeric(palette = ("Spectral"), reverse = TRUE, domain = shake_sh$GRID_CODE)
 
+# leaflet plot 
 leaflet(shake_sh) %>% addProviderTiles(providers$OpenMapSurfer.Roads) %>%
   addPolygons(color = ~pal(GRID_CODE), 
-              weight = .6, 
+              weight = 0, 
               smoothFactor = 0.5,
-              opacity = .5, 
-              fillOpacity = 0.5, 
-              fillColor = ~pal(PARAMVALUE))
+              opacity = 0, 
+              fillOpacity = 0.6, 
+              fillColor = ~pal(PARAMVALUE))%>%
+  addMarkers(lng = -122.31, lat = 38.22) %>%
+  addLegend(pal = pal, values = ~GRID_CODE,
+    title = "MMI")
 
 
 # create a data.frame with the epicenter location
@@ -76,10 +83,10 @@ epicenter <- data.frame(lon=c(-122.31),
 
 
 # add a point to the map
-ggmap(napa_map) +
-                geom_point(
-                aes(x=-122.31, y=38.22, group=NULL), colour = "springgreen",
-                      size=5)
+# ggmap(napa_map) +
+#                geom_point(
+#                aes(x=-122.31, y=38.22, group=NULL), colour = "springgreen",
+#                      size=5)
 
 
 ```
@@ -92,8 +99,24 @@ names       : AREA, PERIMETER, PGAPOL_, PGAPOL_ID, GRID_CODE, PARAMVALUE
 min values  :    0,         0,      10,         1,         1,        1.7 
 max values  :    0,         0,      99,        99,         8,        8.3 
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+
+class       : RasterLayer 
+dimensions  : 201, 301, 60501  (nrow, ncol, ncell)
+resolution  : 0.008333, 0.008333  (x, y)
+extent      : -123.5623, -121.0541, 37.38187, 39.0568  (xmin, xmax, ymin, ymax)
+coord. ref. : NA 
+data source : C:\Users\Kristin\Source\Repos\GEOG4563TeamProject\data\shakemap\raster\mi.fit 
+names       : mi 
+```{r}
+
+crs(shake_rs) <- sp::CRS("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")
+pal3 <- colorNumeric((palette = "Spectral"), reverse = TRUE, values(shake_rs), na.color = "transparent")
+
+leaflet() %>% addTiles() %>%
+  addRasterImage(shake_rs, colors = pal3, opacity = 0.8) %>%
+  addLegend(pal = pal3, values = values(shake_rs),
+    title = "MMI")
+
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
