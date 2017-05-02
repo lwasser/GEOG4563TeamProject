@@ -17,15 +17,16 @@ fluidPage(h1("Napa Valley Earthquake", id = "navBar"),
                                )),
                       tabPanel("10 Minute Timescale", 
                                 fluidPage(
-                                 leafletOutput("tenmin", width = "100%", height = 700),
-                                 absolutePanel(top = 10, right = 10,
+                                  sidebarLayout(position="right",
+                                 mainPanel(leafletOutput("tenmin", width = "100%", height = 700)),
+                                 sidebarPanel(top = 10, right = 10,
                                                sliderInput("range", "Time", min=0, max=10,
                                                            value = range(twitter_data_10min$minutes), step = .1
-                                               )
-                                               # selectInput("colors", "Color Scheme",
-                                               #            rownames(subset(brewer.pal.info, category %in% c("seq", "div")))
-                                               #),
-                                               #checkboxInput("legend", "Show legend", TRUE)
+                                               ),
+                                               selectInput("colors", "Color Scheme",
+                                                          rownames(subset(brewer.pal.info, category %in% c("seq", "div")))
+                                               ),
+                                               checkboxInput("legend", "Show legend", TRUE))
                                  )
                                )
                                ))

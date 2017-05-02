@@ -13,6 +13,7 @@ function(input, output, session) {
     smoothFactor = 0.5,opacity = 1.0, fillOpacity = 0.5, fillColor = ~colorQuantile("YlOrRd",
    CaliCen$Total)(CaliCen$Total), popup=paste0("<b>Total County Population: </b>", CaliCen$Total)
   ,highlightOptions = highlightOptions(color = "white", weight = 2, bringToFront = TRUE)) %>% 
+  fitBounds(-123.56, 37.38, -121.06, 39.04) %>%
   addLayersControl(
         #baseGroups = c("OSM (default)", "Toner", "Toner Lite"),
         overlayGroups = c("Twitter", "Census"),
