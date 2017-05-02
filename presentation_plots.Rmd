@@ -71,15 +71,17 @@ m <- ggmap(napa_map, extent = "device") +
                size = 1)  + 
   geom_point(
     aes(x = -122.31, 
-        y = 38.22, 
-        colour = "darkred"),
-    fill = "darkred",
-    size = 4,
-    alpha=1,
+        y = 38.22),
+    colour = "red",
+    size = 6,
     shape = 19) +
   geom_text(aes(x = -122.31, 
-        y = 38.22, label = "Epicenter"), colour = "darkred", hjust = -.2, vjust =.2)
-m +labs(title = "ShakeMap boundary\n 2014 South Napa Earthquake") + 
+        y = 38.22, label = "Epicenter"), colour = "red", size = 8, hjust = -.2, vjust =.2)
+#m +labs(title = "ShakeMap boundary\n 2014 South Napa Earthquake") + 
+#  theme(legend.position="none")
+  
+m + ggtitle("2014 South Napa Earthquake\nShakeMap boundary") +
+  theme(plot.title = element_text(family = "Times", color="#666666", face="bold", size=32, hjust=0)) +
   theme(legend.position="none")
   
 # theme(legend.title=element_blank())+ scale_colour_discrete(
