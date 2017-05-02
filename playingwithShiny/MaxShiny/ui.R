@@ -55,7 +55,7 @@ fluidPage(h1("Napa Valley Earthquake", id = "navBar"),
                                )),
                       tabPanel("Data Exploration", 
                                pageWithSidebar(
-                                 headerPanel('Iris k-means clustering'),
+                                 headerPanel('Twitter Data Clustering'),
                                  sidebarPanel(
                                   selectInput('xcol', 'X Variable', names(twitter_data_10min)),
                                    selectInput('ycol', 'Y Variable', names(twitter_data_10min),
