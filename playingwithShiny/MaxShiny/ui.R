@@ -13,17 +13,17 @@ fluidPage(h1("Napa Valley Earthquake", id = "navBar"),
 
                       tabPanel("California Census",
                                fluidPage(
-                                 leafletOutput("CaliCensus", width = "100%", height = 700),
+                                 leafletOutput("CaliCensus", width = "100%", height = 800),
                                  p()
                                )),
-                      tabPanel("10 Minute Timescale", 
-                               fluidPage(
+                      tabPanel("10 Minute Range", 
                                  fluidPage(
-                                   leafletOutput("tenmin", width = "100%", height = 700)),
-                                 absolutePanel(draggable = TRUE, top = 140, left = "auto", right = 20, bottom = "auto",
+                                   h1("Time Range"),
+                                   leafletOutput("tenminrange", width = "100%", height = 800),
+                                 absolutePanel(draggable = TRUE, top = 250, left = "auto", right = 20, bottom = "auto",
                                                width = 400, height = "auto",
                                                sliderInput("range", "Time", min=0, max=10,
-                                                           value = range(twitter_data_10min$minutes), step = .1,
+                                                           value = c(0,1), step = .1,
                                                            animate=animationOptions(interval=300, loop=T)
                                                ) 
                                                
@@ -33,8 +33,26 @@ fluidPage(h1("Napa Valley Earthquake", id = "navBar"),
                                               #  ),
                                               #  checkboxInput("legend", "Show legend", TRUE)
                                  )
-                               )
+                              )
                                ),
+                      tabPanel("10 Minute Progression", 
+                               fluidPage(
+                                 h1("Time Progression"),
+                                 leafletOutput("tenmintime", width = "100%", height = 800),
+                                 absolutePanel(draggable = TRUE, top = 250, left = "auto", right = 20, bottom = "auto",
+                                               width = 400, height = "auto",
+                                               sliderInput("progression", "Time", min=0, max=10,
+                                                           value = c(0,0), step = .1,
+                                                           animate=animationOptions(interval=150, loop=T)
+                                               ) 
+                                               
+                                               # ,
+                                               #  selectInput("colors", "Color Scheme",
+                                               #             rownames(subset(brewer.pal.info, category %in% c("seq", "div")))
+                                               #  ),
+                                               #  checkboxInput("legend", "Show legend", TRUE)
+                                 )
+                               )),
                       tabPanel("Data Exploration", 
                                pageWithSidebar(
                                  headerPanel('Iris k-means clustering'),

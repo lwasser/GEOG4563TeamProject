@@ -26,6 +26,10 @@ function(input, output, session) {
     twitter_data_10min[twitter_data_10min$minutes >= input$range[1] & 
                          twitter_data_10min$minutes <= input$range[2],]
   })
+  timeData <- reactive({
+    twitter_data_10min[ 
+                         twitter_data_10min$minutes <= input$progression[2],]
+  })
 
   # This reactive expression represents the palette function,
   # which changes as the user makes selections in UI.
@@ -36,14 +40,41 @@ function(input, output, session) {
   #pal1 <- (brewer.pal(n = 10, name = "Spectral"))
   pal2 <- colorNumeric(rev(brewer.pal(n = 9, name = "Spectral")), values(shake_raster))
   
-  output$tenmin <- renderLeaflet({
+  output$tenminrange <- renderLeaflet({
+    # Use leaflet() here, and only include aspects of the map that
+    # won't need to change dynamically (at least, not unless the
+    # entire map is being torn down and recreated).
+    leaflet(twitter_data_10min) %>% 
+      addProviderTiles("OpenStreetMap.BlackAndWhite") %>%
+      addRasterImage(group = "Shakemap", shake_raster, colors = pal2, opacity = .5) %>%
+      fitBounds(-123.56, 37.38, -121.06, 39.04) %>%
+      addPolygons(data =CaliCen ,group = "Census", color = "#444444", weight = 1,
+                  smoothFactor = 0.5,opacity = 1.0, fillOpacity = 0.5, fillColor = ~colorQuantile("YlOrRd",
+                                                                                                  CaliCen$Total)(CaliCen$Total), popup=paste0("<b>County: </b>", CaliCen$NAMELSAD10,"<br><b>Total County Population: </b></br>", CaliCen$Total)
+                  ,highlightOptions = highlightOptions(color = "white", weight = 2, bringToFront = TRUE)) %>% 
+
+      addLayersControl(
+        overlayGroups = c("Shakemap", "Census"),
+        options = layersControlOptions(collapsed = FALSE))
+    # %>% 
+    #addLegend(position = "bottomleft", colors = pal2, values = values(shake_raster), 
+    #          title = "Shakemap")
+  })
+  output$tenmintime <- renderLeaflet({
     # Use leaflet() here, and only include aspects of the map that
     # won't need to change dynamically (at least, not unless the
     # entire map is being torn down and recreated).
     leaflet(twitter_data_10min) %>% 
       addProviderTiles("OpenStreetMap.BlackAndWhite") %>%
       addRasterImage(shake_raster, colors = pal2, opacity = .5) %>%
-      fitBounds(-123.56, 37.38, -121.06, 39.04) 
+      fitBounds(-123.56, 37.38, -121.06, 39.04) %>%
+      addPolygons(data =CaliCen ,group = "Census", color = "#444444", weight = 1,
+      smoothFactor = 0.5,opacity = 1.0, fillOpacity = 0.5, fillColor = ~colorQuantile("YlOrRd",
+      CaliCen$Total)(CaliCen$Total), popup=paste0("<b>County: </b>", CaliCen$NAMELSAD10,"<br><b>Total County Population: </b></br>", CaliCen$Total)
+       ,highlightOptions = highlightOptions(color = "white", weight = 2, bringToFront = TRUE)) %>% 
+      addLayersControl(
+        overlayGroups = c("Shakemap", "Census"),
+        options = layersControlOptions(collapsed = FALSE))
     # %>% 
     #addLegend(position = "bottomleft", colors = pal2, values = values(shake_raster), 
     #          title = "Shakemap")
@@ -56,7 +87,16 @@ function(input, output, session) {
   observe({
     #   pal <- colorpal()
     
-    leafletProxy("tenmin", data = filteredData()) %>%
+    leafletProxy("tenminrange", data = filteredData()) %>%
+      clearShapes() %>%
+      addCircles(radius = ~500, weight = 1, color = "#777777",
+                 fillColor = ~"red", fillOpacity = 0.7, popup = ~paste(minutes)
+      )
+  })
+  observe({
+    #   pal <- colorpal()
+    
+    leafletProxy("tenmintime", data = timeData()) %>%
       clearShapes() %>%
       addCircles(radius = ~500, weight = 1, color = "#777777",
                  fillColor = ~"red", fillOpacity = 0.7, popup = ~paste(minutes)
@@ -102,11 +142,29 @@ function(input, output, session) {
   })
   
   
-    
+  {
       output$dataspread <- renderDataTable(selectedData())
-    
-  
-  
+  }  
+      
+      
+      ## Observe mouse clicks and add circles
+      observeEvent(input$map_click, {
+
+        click <- input$map_click
+        clat <- click$lat
+        clng <- click$lng
+        address <- revgeocode(c(clng,clat))
+        
+        ## Add the circle to the map proxy
+        ## so you dont need to re-render the whole thing
+        ## I also give the circles a group, "circles", so you can
+        ## then do something like hide all the circles with hideGroup('circles')
+        leafletProxy('tenmin') %>% # use the proxy to save computation
+          addCircles(lng=clng, lat=clat, group='circles',
+                     weight=1, radius=100, color='black', fillColor='orange',
+                     popup=address, fillOpacity=0.5, opacity=1)
+      })    
+
   
 
   
