@@ -3,7 +3,7 @@ library(shiny)
 library(leaflet)
 library(rgdal)
 library(dplyr)
-#source("load.R", local = TRUE)
+source("load.R", local = TRUE)
 
 
 fluidPage(h1("Napa Valley Earthquake", id = "navBar"),
