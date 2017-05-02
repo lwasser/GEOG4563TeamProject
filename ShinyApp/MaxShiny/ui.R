@@ -1,6 +1,6 @@
 library(rsconnect)
 library(shiny)
-
+library(leaflet)
 twitter_data_10min <- read.csv("twitter_data_10min.csv")
 
 fluidPage(h1("Napa Valley Earthquake", id = "navBar"),
