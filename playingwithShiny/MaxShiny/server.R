@@ -26,7 +26,7 @@ function(input, output, session) {
     twitter_data_10min[twitter_data_10min$minutes >= input$range[1] & 
                          twitter_data_10min$minutes <= input$range[2],]
   })
-  
+
   # This reactive expression represents the palette function,
   # which changes as the user makes selections in UI.
   # colorpal <- reactive({
@@ -76,6 +76,64 @@ function(input, output, session) {
   #                       pal = pal, values = ~minutes
   #    )
   #  }
+ 
   
- }
+  
+  selectedData <- reactive({
+    twitter_data_10min[, c(
+     input$xcol, 
+      input$ycol
+
+      )]
+  })
+  
+  clusters <- reactive({
+    kmeans(selectedData(), input$clusters)
+  })
+  
+  output$twitplot <- renderPlot({
+    palette(c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3",
+              "#FF7F00", "#FFFF33", "#A65628", "#F781BF", "#999999"))
+
+    plot(selectedData(),
+         col = clusters()$cluster,
+         pch = 20, cex = 3)
+    points(clusters()$centers, pch = 4, cex = 4, lwd = 4)
+  })
+  
+  
+    
+      output$dataspread <- renderDataTable(selectedData())
+    
+  
+  
+  
+  
+  # ggplot(subData(), aes(tp_date_pressed, sigma)) +
+  #   geom_point() +
+  #   scale_x_date(limits = input$date)
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
+}
+
+
+
+
+
+
 
