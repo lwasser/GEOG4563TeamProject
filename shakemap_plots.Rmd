@@ -33,6 +33,24 @@ shakemap_data <- read.csv("data/shakemap/shakemap.csv", header=TRUE)
 shakemap_data <- na.omit(shakemap_data)
 ```
 
+class       : SpatialPolygonsDataFrame 
+features    : 768 
+extent      : -123.5623, -121.0623, 37.38187, 39.04853  (xmin, xmax, ymin, ymax)
+coord. ref. : +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0 
+variables   : 6
+names       : AREA, PERIMETER, PGAPOL_, PGAPOL_ID, GRID_CODE, PARAMVALUE 
+min values  :    0,         0,      10,         1,         1,        1.7 
+max values  :    0,         0,      99,        99,         8,        8.3 
+
+
+class       : RasterLayer 
+dimensions  : 201, 301, 60501  (nrow, ncol, ncell)
+resolution  : 0.008333, 0.008333  (x, y)
+extent      : -123.5623, -121.0541, 37.38187, 39.0568  (xmin, xmax, ymin, ymax)
+coord. ref. : NA 
+data source : C:\Users\Kristin\Source\Repos\GEOG4563TeamProject\data\shakemap\raster\mi.fit 
+names       : mi 
+
 
 ```{r }
 # Import shapefules
@@ -44,6 +62,13 @@ shake_sh$GRID_CODE<-as.numeric(shake_sh$GRID_CODE)
 # plot of shapefile
 plot(shake_sh, col=shake_sh$PARAMVALUE,
      main = "South Napa Earthquake Shakemap")
+
+
+epi <- makeIcon(
+  iconUrl = "http://icons.iconarchive.com/icons/icons-land/vista-map-markers/256/Map-Marker-Ball-Pink-icon.png",
+  iconWidth = 60, iconHeight = 60,
+  iconAnchorX = 0, iconAnchorY = 0)
+
 
 cols <- c("#FFFFFF","#FFFFFF", "#BFCCFF", "#A0E6FF", "#80FFFF", "#7AFF93", "#FFFF00", "#FFC800","#FF9100","#C80000")
 
@@ -61,7 +86,7 @@ leaflet(shake_sh) %>% addProviderTiles(providers$OpenMapSurfer.Roads) %>%
               fillColor = ~pal1(PARAMVALUE))%>%
   addMarkers(lng = -122.31, lat = 38.22) %>%
   addLegend(pal = pal2, values = ~GRID_CODE,
-    title = "MMI")
+    title = "Intensity")
 
 
 # create a data.frame with the epicenter location
@@ -89,34 +114,18 @@ epicenter <- data.frame(lon=c(-122.31),
 #                aes(x=-122.31, y=38.22, group=NULL), colour = "springgreen",
 #                      size=5)
 
-
 ```
-class       : SpatialPolygonsDataFrame 
-features    : 768 
-extent      : -123.5623, -121.0623, 37.38187, 39.04853  (xmin, xmax, ymin, ymax)
-coord. ref. : +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0 
-variables   : 6
-names       : AREA, PERIMETER, PGAPOL_, PGAPOL_ID, GRID_CODE, PARAMVALUE 
-min values  :    0,         0,      10,         1,         1,        1.7 
-max values  :    0,         0,      99,        99,         8,        8.3 
 
-
-class       : RasterLayer 
-dimensions  : 201, 301, 60501  (nrow, ncol, ncell)
-resolution  : 0.008333, 0.008333  (x, y)
-extent      : -123.5623, -121.0541, 37.38187, 39.0568  (xmin, xmax, ymin, ymax)
-coord. ref. : NA 
-data source : C:\Users\Kristin\Source\Repos\GEOG4563TeamProject\data\shakemap\raster\mi.fit 
-names       : mi 
 ```{r}
 
 crs(shake_rs) <- sp::CRS("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")
-pal3 <- colorNumeric((palette = "Spectral"), reverse = TRUE, values(shake_rs), na.color = "transparent")
+pal3 <- colorNumeric((palette = cols), values(shake_rs))
 
 leaflet() %>% addTiles() %>%
-  addRasterImage(shake_rs, colors = pal3, opacity = 0.8) %>%
+  addRasterImage(shake_rs, colors = pal3, opacity = 0.6) %>%
+  addMarkers(lng = -122.31, lat = 38.22) %>%
   addLegend(pal = pal3, values = values(shake_rs),
-    title = "MMI")
+    title = "Intesity")
 
 ```
 
