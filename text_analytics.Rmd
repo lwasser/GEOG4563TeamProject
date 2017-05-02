@@ -12,7 +12,7 @@ library(lubridate)
 library(ggplot2)
 library(dplyr)
 library(readr)
-library(rgal)
+library(rgdal)
 ```
 
 ```{r}
@@ -225,7 +225,45 @@ word_count$frequency <- word_count$n/total
 ```
 
 
+```{r}
+library(igraph)
+
+tweets1min <- tidy_tweets[tidy_tweets$minutes <= 1,]
+
+# subset with word and minutes
+tweets1min <- tweets1min[c("word", "minutes")]
+
+# tweets that arrived in first minute
+graph_pairs_1min <- graph.data.frame(
+  d = tweets1min,
+  directed = FALSE)
+
+plot(
+  x = graph_pairs_1min,
+  vertex.size = 2,
+  vertex.label = NA,
+  edge.curved = FALSE,
+  edge.width = edge_attr(graph_pairs_1min)$minutes,
+  main = "Pairs")
+
+# create graph clusters
+clusters <- cluster_edge_betweenness(graph_pairs_1min)
+
+# plot communities graph
+plot(
+  x = clusters,
+  y = graph_pairs_1min,
+  vertex.size = 3,
+  #vertex.label = tweets1min$word,
+  edge.curved = FALSE,
+  main = "Communities"
+)
+```
 
 
+```{r}
+library(RColorBrewer)
 
+
+```
 
