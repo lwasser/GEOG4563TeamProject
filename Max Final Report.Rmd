@@ -1,0 +1,177 @@
+---
+title: "Earth Analytics Final Report"
+author: "Maxwell Roland"
+date: "May 3, 2017"
+output: html_document
+---
+
+# Introduction
+
+The Napa Valley earthquake occurred on August 24th, 2014 at approximately 3:20 AM. 
+This event had a recorded magnitude of roughly 6 on the MMI scale. This event
+was selected for its known position as well as large amount of correlating data 
+in two separate formats.The data we used are a shakemap dataset produced by the 
+USGS that tracks and records seismic activity using a combination of USGS ground 
+sensors in conjunction with a suite of sensors that people may self select
+to place in their basements for remote monitoring by the USGS. This data was
+paired with a cleaned and prepped twitter API dataset that contained tweets that
+were geolocated, as well as had a selection of keywords that narrowed the tweets
+scope to pertaining to earthquakes. The goal of this research is to ascertain how
+a collection of tweets could be used in parallel with scientific, and what some
+possible outcomes could be. 
+
+## Study Area
+
+```{r Study area plots, warning=FALSE, message=FALSE, echo=FALSE}
+# work with spatial data; sp package will load with rgdal.
+library(rgdal)
+library(rgeos)
+# for metadata/attributes- vectors or rasters
+library(raster)
+
+library(ggplot2)
+# testing the sf package out for these lessons!
+# library(sf)
+library(RColorBrewer)
+
+library(maps)
+library(ggmap)
+library(dplyr)
+
+library(devtools)
+library(leaflet)
+
+
+options(stringsAsFactors = FALSE)
+
+# load data
+shakemap_data <- read.csv("data/shakemap/shakemap.csv", header=TRUE)
+shakemap_data <- na.omit(shakemap_data)
+
+# load shapefile
+shake_sh <- readOGR(dsn="data/shakemap/shapefile/mi.shp")
+shake_sh$GRID_CODE<-as.numeric(shake_sh$GRID_CODE)
+
+# load raster
+shake_rs <- raster("data/shakemap/raster/mi.fit")
+
+# load data
+shakemap_data <- read.csv("data/shakemap/shakemap.csv", header=TRUE)
+shakemap_data <- na.omit(shakemap_data)
+
+# load shapefile
+shake_sh <- readOGR(dsn="data/shakemap/shapefile/mi.shp")
+shake_sh$GRID_CODE<-as.numeric(shake_sh$GRID_CODE)
+
+# load raster
+shake_rs <- raster("data/shakemap/raster/mi.fit")
+
+# create epicenter icon
+epi <- makeIcon(
+  iconUrl = "http://icons.iconarchive.com/icons/icons-land/vista-map-markers/256/Map-Marker-Ball-Pink-icon.png",
+  iconWidth = 60, iconHeight = 60,
+  iconAnchorX = 0, iconAnchorY = 0)
+
+# set colors for ShakeMap palette
+cols <- c("#FFFFFF","#FFFFFF", "#BFCCFF", "#A0E6FF", "#80FFFF", "#7AFF93", "#FFFF00", "#FFC800","#FF9100","#C80000")
+
+# create palette
+pal1 <- colorNumeric(palette = cols, domain = shake_sh$PARAMVALUE)
+pal2 <- colorNumeric(palette = cols, domain = shake_sh$GRID_CODE)
+
+# plot 
+leaflet(shake_sh) %>% addProviderTiles(providers$OpenMapSurfer.Roads, group = "Base map") %>% fitBounds(-123.56, 37.38, -121.05, 39.05) %>%
+  addPolygons(color = ~pal2(GRID_CODE), 
+              weight = 1, 
+              smoothFactor = 0.5,
+              opacity = .5, 
+              fillOpacity = 0.6, 
+              fillColor = ~pal1(PARAMVALUE),
+              group = "ShakeMap")%>%
+  addMarkers(lng = -122.31, lat = 38.22, group = "Epicenter") %>%
+  addLegend(pal = pal2, values = ~GRID_CODE, position = "bottomright",
+    title = "Intensity") %>%
+  addLayersControl(
+    baseGroups = ("Base map"),
+    overlayGroups= c("ShakeMap", "Epicenter"),
+    options = layersControlOptions(collapsed = FALSE)
+  )
+
+```
+
+# Literature Review
+
+As this type of research is on the cutting edge of what is currently taking place
+in the world of hazard and disaster informatics the literature was pretty sparse
+however we were able to glean some valuable information and techniques from a 
+few sources. Burks et al.(2014) offered our first set of clues into how twitter
+data might be processed and interpreted. Burks used a geolocated scrape of tweets
+with keywords looking for "earthquake" in several languages, similar to our set. 
+In order to begin to filter the noise associated with such large amounts of data
+Burks narrowed down the dataset by filtering the remaining tweets to only those
+occuring in the ten minutes post earthquake. This allowed them more certainty that
+the tweets were related to their events, and not to other colloquial phrase that
+might contain "earthquake". Burks expands on their findings to state that, 
+"geo-tagged Tweets at different radii around a particular site are good 
+predictors of shaking intensity when used in combination with earthquake-based 
+features such as VS30 and source-to-site distance."(2014) While this would be
+a moderate leap from our outcomes, these findings help give creadence to the use
+of twitter data when estimating and analyzing natural hazards when paired with
+tradiional sensor networks. 
+Gu(2016) focuses on the extraction and crawling facet to mining data using tweets. 
+While we received our data pre-processed and in a neat format it was import to 
+understand what went into creating this data set and the complexities associated
+with text mining. Gu's study focuses on the techniques and feasability of augmenting
+classical traffic incident monitoring standards with using tweet text mining
+to determine when, where, and how severe traffic accidents are. In their paper
+Gu demenstates multiple variation on single or multiple token data mining techniques
+using positive and negative feedbacks in order to not grow or reduce the total 
+keyword size erratically. By using the techniques proposed in their paper it would
+be feasible to begin with a complete data set of tweets and begin to mine down 
+very specifically.
+Originally planned as a data source the USGS's Did You Feel It(DYFI) data set 
+is a citizen derived set of information that is reliant on individuals logging
+into a web page and recording if they experienced an earthquake. In their August
+2014 report "What We Know After One Year", the USGS details what information was 
+gleaned of the event using this service. The found that a large amount of reports
+originated near the event site of Napa Valley, however interestinly there were
+also a large amount of reports filed southwest in San Francisco. While on its own
+this might seems a litte weird when combined with population data, as we do in
+our study, we find this is a natural distribution. This data was view as a way
+to visual compare the information we were receiving from the twitter data and 
+confirm that it follows generally the same distributions. 
+Finally, Earle(2011) looks into the feasability of using specifically twitter 
+data when analyzing earthquake detection. Their findings show that using a 
+"moderate" detection threshold a solely twitter based collection method has
+the potential to correctly identify seismic events worldwide. However as noted
+in the paper, "comparison, the USGS global earthquake catalog (http://earthquake.usgs.gov/research/data/pde.php) contains 5,175 earthquakes 
+while only 48 were found by the Twitter detector"(2011) While this is not
+promising statistically we are still in the infancy in understanding and using
+this type of data in the world of natural hazards. Earle also notes that in
+general a vast majority of seismic activity is both too small to be felt by an
+individual as well as the events normally take place outside of populated areas.(2011) 
+For these reasons twitter information is not a complete replacement for traditional
+methods, however the collection type would be useful in areas where there are 
+no traditional sensors, as well as in a qualitative analysis of impacts.(2011)
+
+# Methods
+We obtained data from both the USGS Shakemap program as well as a twitter dataset
+from a connection in project EPIC. THe USGS shakemap data is a raster set that
+is specific to Napa Valley event. The USGS shakemap data can be obtained from 
+the url:https://earthquake.usgs.gov/earthquakes/search/#%7B%22feed%22%3A%221450204437509%22%2C%22search%22%3A%7B%22id%22%3A%221450204437509%22%2C%22name%22%3A%22Search%20Results%22%2C%22isSearch%22%3Atrue%2C%22params%22%3A%7B%22producttype%22%3A%22shakemap%22%2C%22orderby%22%3A%22time%22%7D%7D%2C%22listFormat%22%3A%22shakemap%22%2C%22sort%22%3A%22newest%22%2C%22basemap%22%3A%22terrain%22%2C%22autoUpdate%22%3Afalse%2C%22restrictListToMap%22%3Atrue%2C%22timeZone%22%3A%22utc%22%2C%22mapposition%22%3A%5B%5B-85%2C0%5D%2C%5B85%2C360%5D%5D%2C%22overlays%22%3A%7B%22plates%22%3Atrue%7D%2C%22viewModes%22%3A%7B%22map%22%3Atrue%2C%22list%22%3Atrue%2C%22settings%22%3Atrue%2C%22help%22%3Afalse%7D%7Dy
+This data was used as is, with only cosmetic changes. 
+
+The twitter data was obtained through a personal connection and is not readily
+and publically available. This data originated as a multi-gig csv file that contained
+2.5 million geolocated, text referenced tweets. Intially we read in the file
+into R in chunks of 50,000 rows, performing a dpylr pipe to filter out the tweets
+not pertaining to "napa". This reduced the total tweet count from over two millon 
+to approximately 6000. This was further reduced based on Burks 10 minute threshold to 
+a total of 3000 tweets. These final tweets were used in our analysis. 
+
+
+# Results
+URL: https://maxrlnd.shinyapps.io/teamtwitter/
+
+
+
