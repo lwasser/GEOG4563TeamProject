@@ -144,7 +144,8 @@ Finally, Earle(2011) looks into the feasability of using specifically twitter
 data when analyzing earthquake detection. Their findings show that using a 
 "moderate" detection threshold a solely twitter based collection method has
 the potential to correctly identify seismic events worldwide. However as noted
-in the paper, "comparison, the USGS global earthquake catalog (http://earthquake.usgs.gov/research/data/pde.php) contains 5,175 earthquakes 
+in the paper, "comparison, the USGS global earthquake catalog (http://earthquake.usgs.gov/research/data/pde.php) 
+contains 5,175 earthquakes 
 while only 48 were found by the Twitter detector"(2011) While this is not
 promising statistically we are still in the infancy in understanding and using
 this type of data in the world of natural hazards. Earle also notes that in
@@ -171,7 +172,55 @@ a total of 3000 tweets. These final tweets were used in our analysis.
 
 
 # Results
+
 URL: https://maxrlnd.shinyapps.io/teamtwitter/
+
+Through the process of our data exploration we discovered a few interesting links
+and insights. First of all being that twitter data in incredibly messy, we were
+lucky to be able to obtain an already clean and prepped dataset, however it 
+needed even more cleaning and refining on top of that. This need was evident in the
+literature reviewed, text mining and twitter mining are complex and high level 
+research trends that are picking up more and more credence in mainstream science. 
+Secondly after producing visual plots of our data, and running cluster analysis, 
+we found that the twitter data was able to correctly, in a general statement, 
+identify the epicenter of the Napa Earthquake when viewing on a worldwide exent. 
+
+# Summary
+
+I really enjoyed this exploration. I feel really lucky to be able to work 
+with a novel dataset and type. This data, when paired and compared to the literature
+reviewed, could be the start of an interesting study. I have seen in the literature 
+that when combining twitter data with machine learning it could be possible to 
+develop an algorithm to identify seismic event across the world, especially 
+where seismic instruments are not present. I am planning on continuing the 
+refining and exploration of this dataset after class has concluded to see what
+else I can learn. I would also like to explore going back to a very large 
+dataset and seeing if without refinement how well the data can identify 
+an epicenter. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -45,7 +45,7 @@ function(input, output, session) {
     # won't need to change dynamically (at least, not unless the
     # entire map is being torn down and recreated).
     leaflet(twitter_data_10min) %>% 
-      addProviderTiles("OpenStreetMap.BlackAndWhite") %>%
+      addProviderTiles(providers$OpenMapSurfer.Roads) %>%
       addRasterImage(group = "Shakemap", shake_raster, colors = pal2, opacity = .5) %>%
       fitBounds(-123.56, 37.38, -121.06, 39.04) %>%
       addPolygons(data =CaliCen ,group = "Census", color = "#444444", weight = 1,
@@ -65,7 +65,7 @@ function(input, output, session) {
     # won't need to change dynamically (at least, not unless the
     # entire map is being torn down and recreated).
     leaflet(twitter_data_10min) %>% 
-      addProviderTiles("OpenStreetMap.BlackAndWhite") %>%
+      addProviderTiles(providers$OpenMapSurfer.Roads) %>%
       addRasterImage(shake_raster, colors = pal2, opacity = .5) %>%
       fitBounds(-123.56, 37.38, -121.06, 39.04) %>%
       addPolygons(data =CaliCen ,group = "Census", color = "#444444", weight = 1,
