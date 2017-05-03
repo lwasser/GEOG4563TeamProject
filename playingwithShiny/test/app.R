@@ -8,7 +8,7 @@
 #
 
 library(shiny)
-library(RcolorBrewer)
+library(RColorBrewer)
 library(dplyr)
 
 colors <- brewer.pal(4, "Set3")
