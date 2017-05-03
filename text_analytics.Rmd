@@ -210,6 +210,9 @@ tidy_tweets <- twitter_data_10min %>%
   unnest_tokens(word, Text, token = "regex", pattern = unnest_reg) %>%
   filter(!word %in% stop_words$word,
          str_detect(word, "[a-z]"))
+
+tidy_message <- twitter_data_10min %>%
+  mutate(Text = str_replace_all(Text, replace_reg, "")) 
 ```
 
 ```{r}
@@ -221,9 +224,55 @@ total <- sum(word_count$n)
 word_count$frequency <- word_count$n/total
 
 
+```
+
+```{r}
+
+tidy_tweets$min_rounded <- floor(tidy_tweets$minutes)
+
+frequency_bymin <- tidy_tweets %>% 
+  group_by(min_rounded) %>% 
+  count(word, sort = TRUE) %>% 
+  left_join(tidy_tweets %>% 
+              group_by(min_rounded) %>% 
+              summarise(total = n())) %>%
+  mutate(freq = n/total)
 
 ```
 
+```{r}
+library(wordcloud)
+
+tidy_tweets %>%
+  count(word) %>%
+  with(wordcloud(word, n, max.words = 100))
+
+```
+
+
+```{r}
+
+words_by_time <- tidy_tweets %>%
+  filter(!str_detect(word, "^@")) %>%
+  mutate(time_floor = floor_date(Timestamp, unit = "1 minute")) %>%
+  count(time_floor, word) %>%
+  mutate(time_total = sum(n)) %>%
+  group_by(word) %>%
+  mutate(word_total = sum(n)) %>%
+  ungroup() %>%
+  rename(count = n) %>%
+  filter(word_total > 30)
+
+```
+
+```{r}
+myCorpus <- Corpus(VectorSource(tidy_tweets$word))
+myDtm <- TermDocumentMatrix(myCorpus)
+
+findFreqTerms(myDtm, lowfreq = 10)
+findAssocs(myDtm, "earthquake", 0.30)
+
+```
 
 ```{r}
 library(igraph)
@@ -261,9 +310,5 @@ plot(
 ```
 
 
-```{r}
-library(RColorBrewer)
 
-
-```
 

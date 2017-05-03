@@ -28,6 +28,13 @@ library(leaflet)
 options(stringsAsFactors = FALSE)
 ```
 
+8/23/2012-3/14/2017	735,637	 1,048,576 
+2014	201,430	 610,955 
+31 days	25,267	67,593
+1 day	4944	15309
+10 min	2,457	867
+
+
 ```{r shakemap-data}
 # load data
 shakemap_data <- read.csv("data/shakemap/shakemap.csv", header=TRUE)
