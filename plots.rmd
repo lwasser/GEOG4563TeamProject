@@ -39,30 +39,112 @@ shakemap_data <- na.omit(shakemap_data)
 
 ```{r twitter-data}
 # load data - longitude and latitude already transformed
-twitter_data <- read.csv("data/twitter_31days.csv")
-twitter_data$Timestamp<-as.POSIXct(twitter_data$Timestamp)
-twitter_data_10min <- twitter_data <- subset(twitter_data, 
-                             twitter_data$Timestamp >= ('2014-08-24 04:20:00') &
-                            twitter_data$Timestamp <= ('2014-08-24 04:29:59') )
+# twitter_data_10min <- read.csv("data/twitter/twitter_data_10min.csv")
+twitter_data_31day <- read.csv("data/twitter/twitter_data_31day.csv")
+twitter_data_31day$Timestamp<-as.POSIXct(twitter_data_31day$Timestamp)
+twitter_data_1day <- subset(twitter_data_31day, 
+                             twitter_data_31day$Timestamp >= ('2014-08-24 04:20:44') &
+                            twitter_data_31day$Timestamp <= ('2014-08-25 04:20:43') )
 
 ```
 
-```{r plot-tweets-per-10-sec}
-# plot no. of tweets in 10 sec intervals
-ggplot(twitter_data_10min, aes(Timestamp)) +
-  geom_freqpoly(binwidth = 10) +
-  labs(x = "Time (CDT)", y = "Number of tweets", title = "Tweets over time (10 second intervals)")
-# could also use + geom_histogram
+```{r plot-tweets-per-day}
+# plot no. of tweets in 1 day intervals
+# twitter_data_1day$hour_from_erup <- (twitter_data_1day$whole_min_from_erup)/60
+
+ggplot(twitter_data_31day, aes(whole_day_from_erup)) +
+  #geom_histogram(binwidth = 1, boundary = 1, closed = "left") +
+  geom_histogram(breaks=seq(0, 31, by = 1),
+                 col = "black",
+                 fill = "blue",
+                 alpha = .2)+
+  labs(x = "Tweets per day", 
+       y = "Number of tweets", 
+       title = "Days from eruption") +
+  xlim(c(0,31))
+
+ggplot(twitter_data_1day, aes(hour_from_erup)) +
+  geom_histogram(breaks=seq(0, 23, by = 1),
+                 col = "black",
+                 fill = "blue",
+                 alpha = .2)+
+  labs(x = "Hours from eruption", 
+       y = "Number of tweets", 
+       title = "Tweets per hour") +
+  xlim(c(0,23))
 ```
+
+```{r plot-tweets-per-day}
+# plot no. of tweets in day intervals
+ggplot(twitter_data_31day, aes(whole_day_from_erup)) +
+  geom_freqpoly() +
+  labs(x = "Time (CDT)",
+       y = "Number of tweets",
+       title = "Tweets over days")
+
+
+```
+
 
 ```{r hist-tweets-over-time-mins}
 # add column of time: minutes from eq
-twitter_data_10min$minutes <- minute(twitter_data_10min$Timestamp)-20
+# twitter_data_10min$minutes <- minute(twitter_data_10min$Timestamp)-20
 
 # plot no. of tweets in 1 min intervals
-ggplot(twitter_data_10min, aes(minutes)) +
+ggplot(twitter_data_10min, aes(whole_min_from_erup)) +
   geom_histogram() +
   labs(x = "Minutes after earthquake", y = "Number of tweets", title = "Number of tweets over time (minute intervals)")
+
+ggplot(twitter_data_10min, aes(whole_min_from_erup)) +
+  #geom_histogram(binwidth = 1, boundary = 1, closed = "left") +
+  geom_histogram(breaks=seq(0, 9, by = 1),
+                 col = "black",
+                 fill = "blue",
+                 alpha = .2)+
+  labs(x = "Minutes after earthquake", 
+       y = "Number of tweets", 
+       title = "Minutes from eruption") +
+  xlim(c(0,9))
+```
+```{r}
+library(grid)
+library(gridExtra)
+
+hist_31day <-ggplot(twitter_data_31day, aes(whole_day_from_erup)) +
+  #geom_histogram(binwidth = 1, boundary = 1, closed = "left") +
+  geom_histogram(breaks=seq(0, 31, by = 1),
+                 col = "black",
+                 fill = "blue",
+                 alpha = .2)+
+  labs(x = "Tweets per day", 
+       y = "Number of tweets", 
+       title = "31 days") +
+  xlim(c(0,31))
+
+hist_1day <-ggplot(twitter_data_1day, aes(hour_from_erup)) +
+  geom_histogram(breaks=seq(0, 23, by = 1),
+                 col = "black",
+                 fill = "green",
+                 alpha = .2)+
+  labs(x = "Hours from eruption", 
+       y = "Number of tweets", 
+       title = "24 hours") +
+  xlim(c(0,23))
+
+hist_1min <- ggplot(twitter_data_10min, aes(whole_min_from_erup)) +
+  #geom_histogram(binwidth = 1, boundary = 1, closed = "left") +
+  geom_histogram(breaks=seq(0, 9, by = 1),
+                 col = "black",
+                 fill = "darkred",
+                 alpha = .2)+
+  labs(x = "Minutes after earthquake", 
+       y = "Number of tweets", 
+       title = "10 minutes") +
+  xlim(c(0,9))
+
+
+grid.arrange(hist_31day, hist_1day, hist_1min, ncol = 3, top = "Tweets by time from eruption\nSouth Napa Earthquake")
+
 ```
 
 ```{r plot-distance-from-epicenter}
@@ -70,11 +152,54 @@ ggplot(twitter_data_10min, aes(minutes)) +
 # plot number of tweets by distance from epicenter
 ggplot(twitter_data_10min, aes(dist)) +
   geom_freqpoly(binwidth = 1) +
-  labs(x = "miles from epicenter", title = "# of Tweets by Distance from Epicenter")
+  labs(x = "miles from epicenter", 
+       title = "# of Tweets by Distance from Epicenter")
+
+# plot number of tweets by time by distance
+dist_all <- ggplot(twitter_data_10min, 
+       aes(x = frac_min_from_erup, 
+           y = dist)) +
+  geom_point(colour = "royalblue2", size = 1) + 
+  scale_x_continuous("minutes after eruption", 
+                     breaks = c(0,1,2,3,4,5,6,7,8,9)) + 
+   scale_y_continuous("distance (mi)") + 
+  labs(subtitle = "distance: global")
+
 
 # plot number of tweets by time by distance (distance <= 500 miles)
-ggplot(twitter_data_10min, aes(x = Timestamp, y = dist)) + geom_point() +ylim(0,100) + labs(title="Tweets by distance by time\n(distance < 500 miles)", x = "time", y="distance (miles)")
+dist_500mi <- ggplot(twitter_data_10min, 
+                     aes(x = frac_min_from_erup, 
+                         y = dist)) + 
+  geom_point(colour = "royalblue2", size = 1) +
+  scale_x_continuous("minutes after eruption", 
+                     breaks = c(0,1,2,3,4,5,6,7,8,9)) + 
+  scale_y_continuous("distance (mi)", limits = c(0,500)) +
+  labs(subtitle = "distance: 0 - 500 mi." )
+ 
 
+# plot number of tweets by time by distance (distance <= 100 miles)
+dist_100mi <- ggplot(twitter_data_10min, 
+                     aes(x = frac_min_from_erup,
+                         y = dist)) + 
+  geom_point(colour = "royalblue2", size = 1) +
+  scale_x_continuous("minutes after eruption", 
+                     breaks = c(0,1,2,3,4,5,6,7,8,9)) + 
+  scale_y_continuous("distance (mi)", limits = c(0,100)) +
+  labs(subtitle = "distance: 0 - 100 mi." )
+
+# plot number of tweets by time by distance (distance <= 50 mi.)
+dist_50mi <- ggplot(twitter_data_10min, 
+                    aes(x = frac_min_from_erup, 
+                        y = dist)) + 
+  geom_point(colour = "royalblue2", size = 1) +
+  scale_x_continuous("minutes after eruption", 
+                     breaks = c(0,1,2,3,4,5,6,7,8,9)) + 
+  scale_y_continuous("distance (mi)", limits = c(0,50)) +
+  labs(subtitle = "distance: 0 - 50 mi." )
+
+
+grid.arrange(dist_all, dist_500mi, dist_100mi, dist_50mi, ncol = 2, 
+             top = "Tweets by Distance\nSouth Napa Earthquake")
 ```
 
 

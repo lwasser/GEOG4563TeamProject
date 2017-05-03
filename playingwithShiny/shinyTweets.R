@@ -10,7 +10,19 @@
 library(shiny)
 library(leaflet)
 library(RColorBrewer)
+
+# work with spatial data; sp package will load with rgdal.
+library(rgdal)
+library(rgeos)
+# for metadata/attributes- vectors or rasters
 library(raster)
+
+# load shapefile
+shake_sh <- readOGR(dsn="../data/shakemap/shapefile/mi.shp")
+shake_sh$GRID_CODE<-as.numeric(shake_sh$GRID_CODE)
+
+# load raster
+shake_rs <- raster("../data/shakemap/raster/mi.fit")
 
 ui <- bootstrapPage(
   tags$style(type = "text/css", "html, body {width:100%;height:100%}"),
@@ -41,7 +53,7 @@ server <- function(input, output, session) {
   # })
   
   #pal1 <- (brewer.pal(n = 10, name = "Spectral"))
-  pal2 <- colorNumeric(rev(brewer.pal(n = 9, name = "Spectral")), values(shake_raster))
+  pal2 <- colorNumeric(rev(brewer.pal(n = 9, name = "Spectral")), values(shake_rs))
    
   output$map <- renderLeaflet({
     # Use leaflet() here, and only include aspects of the map that
@@ -49,7 +61,7 @@ server <- function(input, output, session) {
     # entire map is being torn down and recreated).
     leaflet(twitter_data_10min) %>% 
       addProviderTiles("OpenStreetMap.BlackAndWhite") %>%
-      addRasterImage(shake_raster, colors = pal2, opacity = .5) %>%
+      addRasterImage(shake_rs, colors = pal2, opacity = .5) %>%
       fitBounds(-123.56, 37.38, -121.06, 39.04) 
       # %>% 
       #addLegend(position = "bottomleft", colors = pal2, values = values(shake_raster), 
