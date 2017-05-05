@@ -1,0 +1,1618 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<pager version="1.0 Revision 1488" xml_version="1" process_timestamp="2014-08-28T14:48:17Z" elapsed="4 days, 4 hours" ccode="XF" approved="A" tsunami="0">
+	<event eventcode="nc72282711" versioncode="nc72282711" number="26" shakeversion="27" magnitude="6.0" depth="11.2" lat="38.220200" lon="-122.312800" event_timestamp="2014-08-24T10:20:44Z" event_description="6.8 km (4.2 mi) NW of American Canyon, CA" maxmmi="8.0" shaketime="2014-08-27T20:21:20Z" isreviewed="False" localtime="03:20:44"/>
+	<alerts>
+		<alert type="economic" level="red" summary="yes" units="USD">
+			<bin min="0" max="999999" probability="0" color="green"/>
+			<bin min="1000000" max="9999999" probability="2" color="yellow"/>
+			<bin min="10000000" max="99999999" probability="10" color="yellow"/>
+			<bin min="100000000" max="999999999" probability="28" color="orange"/>
+			<bin min="1000000000" max="9999999999" probability="35" color="red"/>
+			<bin min="10000000000" max="99999999999" probability="20" color="red"/>
+			<bin min="100000000000" max="999999999999" probability="5" color="red"/>
+		</alert>
+		<alert type="fatality" level="green" summary="no" units="fatalities">
+			<bin min="0" max="0" probability="76" color="green"/>
+			<bin min="1" max="9" probability="24" color="yellow"/>
+			<bin min="10" max="99" probability="0" color="yellow"/>
+			<bin min="100" max="999" probability="0" color="orange"/>
+			<bin min="1000" max="9999" probability="0" color="red"/>
+			<bin min="10000" max="99999" probability="0" color="red"/>
+			<bin min="100000" max="999999" probability="0" color="red"/>
+		</alert>
+</alerts>
+	<exposure dmin="0.5" dmax="1.5" exposure="0" rangeInsideMap="0"/>
+	<exposure dmin="1.5" dmax="2.5" exposure="166040" rangeInsideMap="0"/>
+	<exposure dmin="2.5" dmax="3.5" exposure="4715132" rangeInsideMap="0"/>
+	<exposure dmin="3.5" dmax="4.5" exposure="3281444" rangeInsideMap="1"/>
+	<exposure dmin="4.5" dmax="5.5" exposure="370458" rangeInsideMap="1"/>
+	<exposure dmin="5.5" dmax="6.5" exposure="144989" rangeInsideMap="1"/>
+	<exposure dmin="6.5" dmax="7.5" exposure="52257" rangeInsideMap="1"/>
+	<exposure dmin="7.5" dmax="8.5" exposure="81977" rangeInsideMap="1"/>
+	<exposure dmin="8.5" dmax="9.5" exposure="461" rangeInsideMap="1"/>
+	<exposure dmin="9.5" dmax="10.5" exposure="0" rangeInsideMap="1"/>
+	<city name="Napa" lat="38.297140" lon="-122.285530" population="76915" mmi="8.090000" iscapital="0"/>
+	<city name="Yountville" lat="38.401580" lon="-122.360810" population="2933" mmi="6.930000" iscapital="0"/>
+	<city name="American Canyon" lat="38.174920" lon="-122.260800" population="19454" mmi="6.840000" iscapital="0"/>
+	<city name="El Verano" lat="38.297690" lon="-122.491650" population="4123" mmi="6.360000" iscapital="0"/>
+	<city name="Sonoma" lat="38.291860" lon="-122.458040" population="10648" mmi="6.350000" iscapital="0"/>
+	<city name="Temelec" lat="38.266580" lon="-122.492760" population="1441" mmi="6.190000" iscapital="0"/>
+	<city name="Boyes Hot Springs" lat="38.313800" lon="-122.481930" population="6656" mmi="6.060000" iscapital="0"/>
+	<city name="Vallejo" lat="38.104090" lon="-122.256640" population="115942" mmi="6.050000" iscapital="0"/>
+	<city name="Fetters Hot Springs-Agua Caliente" lat="38.321400" lon="-122.486820" population="4144" mmi="6.040000" iscapital="0"/>
+	<city name="Eldridge" lat="38.348800" lon="-122.510820" population="1233" mmi="5.900000" iscapital="0"/>
+	<city name="Benicia" lat="38.049360" lon="-122.158580" population="26997" mmi="5.810000" iscapital="0"/>
+	<city name="Crockett" lat="38.052420" lon="-122.213020" population="3094" mmi="5.480000" iscapital="0"/>
+	<city name="Green Valley" lat="38.252970" lon="-122.162190" population="1625" mmi="5.450000" iscapital="0"/>
+	<city name="Rodeo" lat="38.032980" lon="-122.266910" population="8679" mmi="5.320000" iscapital="0"/>
+	<city name="Saint Helena" lat="38.505190" lon="-122.470260" population="5814" mmi="5.280000" iscapital="0"/>
+	<city name="Hercules" lat="38.017140" lon="-122.288580" population="24060" mmi="5.220000" iscapital="0"/>
+	<city name="Kenwood" lat="38.413800" lon="-122.546090" population="1028" mmi="5.020000" iscapital="0"/>
+	<city name="Pinole" lat="38.004370" lon="-122.298860" population="18390" mmi="4.940000" iscapital="0"/>
+	<city name="Martinez" lat="38.019370" lon="-122.134130" population="35824" mmi="4.920000" iscapital="0"/>
+	<city name="Suisun" lat="38.238250" lon="-122.040240" population="28111" mmi="4.860000" iscapital="0"/>
+	<city name="Penngrove" lat="38.299640" lon="-122.666650" population="2522" mmi="4.780000" iscapital="0"/>
+	<city name="Fairfield" lat="38.249360" lon="-122.039970" population="105321" mmi="4.760000" iscapital="0"/>
+	<city name="Deer Park" lat="38.532690" lon="-122.469700" population="1267" mmi="4.710000" iscapital="0"/>
+	<city name="Tara Hills" lat="37.993530" lon="-122.316360" population="5126" mmi="4.690000" iscapital="0"/>
+	<city name="Bayview" lat="38.007020" lon="-122.318780" population="1754" mmi="4.670000" iscapital="0"/>
+	<city name="Mountain View" lat="38.008810" lon="-122.117460" population="2372" mmi="4.660000" iscapital="0"/>
+	<city name="Cotati" lat="38.326860" lon="-122.707210" population="7265" mmi="4.640000" iscapital="0"/>
+	<city name="Petaluma" lat="38.232420" lon="-122.636650" population="57941" mmi="4.630000" iscapital="0"/>
+	<city name="Rohnert Park" lat="38.339640" lon="-122.701100" population="40971" mmi="4.630000" iscapital="0"/>
+	<city name="Vine Hill" lat="38.008530" lon="-122.096080" population="3761" mmi="4.570000" iscapital="0"/>
+	<city name="Montalvin" lat="37.995480" lon="-122.332750" population="2876" mmi="4.540000" iscapital="0"/>
+	<city name="Angwin" lat="38.575740" lon="-122.449980" population="3051" mmi="4.480000" iscapital="0"/>
+	<city name="Calistoga" lat="38.578800" lon="-122.579710" population="5155" mmi="4.460000" iscapital="0"/>
+	<city name="El Sobrante" lat="37.977150" lon="-122.295250" population="12669" mmi="4.460000" iscapital="0"/>
+	<city name="Santa Rosa" lat="38.440470" lon="-122.714430" population="167815" mmi="4.400000" iscapital="0"/>
+	<city name="Roseland" lat="38.422130" lon="-122.728040" population="6325" mmi="4.390000" iscapital="0"/>
+	<city name="Vacaville" lat="38.356580" lon="-121.987740" population="92428" mmi="4.380000" iscapital="0"/>
+	<city name="North Richmond" lat="37.958810" lon="-122.367470" population="3717" mmi="4.250000" iscapital="0"/>
+	<city name="Pacheco" lat="37.983530" lon="-122.075240" population="3685" mmi="4.250000" iscapital="0"/>
+	<city name="Allendale" lat="38.444630" lon="-121.943020" population="1506" mmi="4.230000" iscapital="0"/>
+	<city name="Novato" lat="38.107420" lon="-122.569700" population="51904" mmi="4.230000" iscapital="0"/>
+	<city name="Black Point-Green Point" lat="38.115470" lon="-122.513180" population="1306" mmi="4.230000" iscapital="0"/>
+	<city name="Hartley" lat="38.417130" lon="-121.946910" population="2510" mmi="4.190000" iscapital="0"/>
+	<city name="Rollingwood" lat="37.965200" lon="-122.329970" population="2969" mmi="4.190000" iscapital="0"/>
+	<city name="Larkfield-Wikiup" lat="38.513420" lon="-122.750940" population="8884" mmi="4.170000" iscapital="0"/>
+	<city name="San Pablo" lat="37.962150" lon="-122.345530" population="29139" mmi="4.150000" iscapital="0"/>
+	<city name="Waldon" lat="37.926310" lon="-122.055520" population="5364" mmi="4.130000" iscapital="0"/>
+	<city name="Winters" lat="38.524910" lon="-121.970800" population="6624" mmi="4.130000" iscapital="0"/>
+	<city name="Middletown" lat="38.752400" lon="-122.614990" population="1323" mmi="4.120000" iscapital="0"/>
+	<city name="Richmond" lat="37.935760" lon="-122.347750" population="103701" mmi="4.120000" iscapital="0"/>
+	<city name="Concord" lat="37.977980" lon="-122.031070" population="122067" mmi="4.110000" iscapital="0"/>
+	<city name="East Richmond Heights" lat="37.944920" lon="-122.313580" population="3280" mmi="4.100000" iscapital="0"/>
+	<city name="Sebastopol" lat="38.402140" lon="-122.823880" population="7379" mmi="4.090000" iscapital="0"/>
+	<city name="Pleasant Hill" lat="37.947980" lon="-122.060800" population="33152" mmi="4.080000" iscapital="0"/>
+	<city name="Dixon" lat="38.445460" lon="-121.823300" population="18351" mmi="4.040000" iscapital="0"/>
+	<city name="Foster City" lat="37.558550" lon="-122.271080" population="30567" mmi="4.030000" iscapital="0"/>
+	<city name="Healdsburg" lat="38.610470" lon="-122.869160" population="11254" mmi="4.020000" iscapital="0"/>
+	<city name="Burlingame" lat="37.584100" lon="-122.366080" population="28806" mmi="3.970000" iscapital="0"/>
+	<city name="Windsor" lat="38.547130" lon="-122.816380" population="26801" mmi="3.960000" iscapital="0"/>
+	<city name="San Bruno" lat="37.630490" lon="-122.411080" population="41114" mmi="3.940000" iscapital="0"/>
+	<city name="Rio Vista" lat="38.155750" lon="-121.691340" population="7360" mmi="3.930000" iscapital="0"/>
+	<city name="San Rafael" lat="37.973530" lon="-122.531090" population="57713" mmi="3.930000" iscapital="0"/>
+	<city name="Cottonwood" lat="38.658240" lon="-121.971080" population="3850" mmi="3.910000" iscapital="0"/>
+	<city name="Lagunitas-Forest Knolls" lat="38.017930" lon="-122.691240" population="1819" mmi="3.890000" iscapital="0"/>
+	<city name="Millbrae" lat="37.598550" lon="-122.387190" population="21532" mmi="3.880000" iscapital="0"/>
+	<city name="Esparto" lat="38.692130" lon="-122.017190" population="3108" mmi="3.860000" iscapital="0"/>
+	<city name="Brisbane" lat="37.680770" lon="-122.399970" population="4282" mmi="3.850000" iscapital="0"/>
+	<city name="Bay Point" lat="38.029090" lon="-121.961630" population="21534" mmi="3.840000" iscapital="0"/>
+	<city name="Bay Point" lat="38.026760" lon="-121.941940" population="21349" mmi="3.840000" iscapital="0"/>
+	<city name="Redwood Shores" lat="37.531880" lon="-122.248020" population="10500" mmi="3.840000" iscapital="0"/>
+	<city name="Saranap" lat="37.884920" lon="-122.076070" population="5202" mmi="3.840000" iscapital="0"/>
+	<city name="Lucas Valley-Marinwood" lat="38.040110" lon="-122.575500" population="6094" mmi="3.840000" iscapital="0"/>
+	<city name="Walnut Creek" lat="37.906310" lon="-122.064960" population="64173" mmi="3.830000" iscapital="0"/>
+	<city name="Albany" lat="37.886870" lon="-122.297750" population="18539" mmi="3.820000" iscapital="0"/>
+	<city name="Kensington" lat="37.910480" lon="-122.280250" population="5077" mmi="3.820000" iscapital="0"/>
+	<city name="Pittsburg" lat="38.027980" lon="-121.884680" population="63264" mmi="3.810000" iscapital="0"/>
+	<city name="Lafayette" lat="37.885760" lon="-122.118020" population="23893" mmi="3.800000" iscapital="0"/>
+	<city name="Ross" lat="37.962420" lon="-122.554980" population="2415" mmi="3.800000" iscapital="0"/>
+	<city name="Cobb" lat="38.822130" lon="-122.723050" population="1778" mmi="3.790000" iscapital="0"/>
+	<city name="Davis" lat="38.544910" lon="-121.740520" population="65622" mmi="3.790000" iscapital="0"/>
+	<city name="Graton" lat="38.436300" lon="-122.869720" population="1707" mmi="3.790000" iscapital="0"/>
+	<city name="Kentfield" lat="37.952150" lon="-122.557200" population="6485" mmi="3.790000" iscapital="0"/>
+	<city name="Santa Venetia" lat="37.998530" lon="-122.525250" population="4292" mmi="3.790000" iscapital="0"/>
+	<city name="Colma" lat="37.676880" lon="-122.459700" population="1792" mmi="3.780000" iscapital="0"/>
+	<city name="Fairfax" lat="37.987150" lon="-122.588870" population="7441" mmi="3.780000" iscapital="0"/>
+	<city name="Inverness" lat="38.101030" lon="-122.856940" population="1304" mmi="3.780000" iscapital="0"/>
+	<city name="Bolinas" lat="37.909370" lon="-122.686370" population="1620" mmi="3.770000" iscapital="0"/>
+	<city name="Clayton" lat="37.941030" lon="-121.935790" population="10897" mmi="3.770000" iscapital="0"/>
+	<city name="San Anselmo" lat="37.974650" lon="-122.561640" population="12336" mmi="3.770000" iscapital="0"/>
+	<city name="Broadmoor" lat="37.686600" lon="-122.482750" population="4176" mmi="3.760000" iscapital="0"/>
+	<city name="Larkspur" lat="37.934090" lon="-122.535250" population="11926" mmi="3.750000" iscapital="0"/>
+	<city name="Sausalito" lat="37.859090" lon="-122.485250" population="7061" mmi="3.750000" iscapital="0"/>
+	<city name="South San Francisco" lat="37.654660" lon="-122.407750" population="63632" mmi="3.750000" iscapital="0"/>
+	<city name="Corte Madera" lat="37.925480" lon="-122.527480" population="9253" mmi="3.730000" iscapital="0"/>
+	<city name="Sleepy Hollow" lat="38.010480" lon="-122.584420" population="2384" mmi="3.730000" iscapital="0"/>
+	<city name="Berkeley" lat="37.871590" lon="-122.272750" population="112580" mmi="3.720000" iscapital="0"/>
+	<city name="San Mateo" lat="37.562990" lon="-122.325530" population="97207" mmi="3.720000" iscapital="0"/>
+	<city name="Alamo" lat="37.850200" lon="-122.032180" population="14570" mmi="3.710000" iscapital="0"/>
+	<city name="Daly City" lat="37.705770" lon="-122.461920" population="101123" mmi="3.710000" iscapital="0"/>
+	<city name="Orinda" lat="37.877150" lon="-122.179690" population="17643" mmi="3.710000" iscapital="0"/>
+	<city name="El Cerrito" lat="37.915760" lon="-122.311640" population="23549" mmi="3.700000" iscapital="0"/>
+	<city name="Woodacre" lat="38.012700" lon="-122.645260" population="1348" mmi="3.700000" iscapital="0"/>
+	<city name="Emeryville" lat="37.831320" lon="-122.285250" population="10080" mmi="3.690000" iscapital="0"/>
+	<city name="Diablo" lat="37.834930" lon="-121.958010" population="1158" mmi="3.670000" iscapital="0"/>
+	<city name="Moraga" lat="37.834930" lon="-122.129690" population="16016" mmi="3.650000" iscapital="0"/>
+	<city name="Belmont" lat="37.520210" lon="-122.275800" population="25835" mmi="3.640000" iscapital="0"/>
+	<city name="Forestville" lat="38.473520" lon="-122.890270" population="3293" mmi="3.640000" iscapital="0"/>
+	<city name="Hillsborough" lat="37.574100" lon="-122.379420" population="10825" mmi="3.640000" iscapital="0"/>
+	<city name="Woodland" lat="38.678520" lon="-121.773300" population="55468" mmi="3.630000" iscapital="0"/>
+	<city name="Danville" lat="37.821590" lon="-121.999960" population="42039" mmi="3.620000" iscapital="0"/>
+	<city name="Moss Beach" lat="37.527440" lon="-122.513310" population="3103" mmi="3.610000" iscapital="0"/>
+	<city name="Bodega Bay" lat="38.333250" lon="-123.048060" population="1077" mmi="3.600000" iscapital="0"/>
+	<city name="Alameda" lat="37.765210" lon="-122.241640" population="73812" mmi="3.590000" iscapital="0"/>
+	<city name="Marin City" lat="37.868540" lon="-122.509140" population="2666" mmi="3.590000" iscapital="0"/>
+	<city name="Mill Valley" lat="37.906040" lon="-122.544980" population="13903" mmi="3.580000" iscapital="0"/>
+	<city name="Oakland" lat="37.804370" lon="-122.270800" population="390724" mmi="3.580000" iscapital="0"/>
+	<city name="Occidental" lat="38.407410" lon="-122.948330" population="1115" mmi="3.580000" iscapital="0"/>
+	<city name="Walnut Grove" lat="38.242140" lon="-121.511620" population="1542" mmi="3.570000" iscapital="0"/>
+	<city name="Montara" lat="37.542160" lon="-122.516090" population="2909" mmi="3.560000" iscapital="0"/>
+	<city name="Pacifica" lat="37.613830" lon="-122.486920" population="37234" mmi="3.550000" iscapital="0"/>
+	<city name="San Francisco" lat="37.774930" lon="-122.419420" population="805235" mmi="3.540000" iscapital="0"/>
+	<city name="Belvedere" lat="37.872700" lon="-122.464420" population="2068" mmi="3.530000" iscapital="0"/>
+	<city name="Blackhawk" lat="37.820760" lon="-121.907740" population="9354" mmi="3.520000" iscapital="0"/>
+	<city name="Strawberry" lat="37.896870" lon="-122.508860" population="5393" mmi="3.520000" iscapital="0"/>
+	<city name="Tamalpais-Homestead Valley" lat="37.878340" lon="-122.536250" population="10735" mmi="3.520000" iscapital="0"/>
+	<city name="Redwood City" lat="37.485220" lon="-122.236350" population="76815" mmi="3.510000" iscapital="0"/>
+	<city name="Hidden Valley Lake" lat="38.807960" lon="-122.558320" population="5579" mmi="3.500000" iscapital="0"/>
+	<city name="Piedmont" lat="37.824370" lon="-122.231640" population="10667" mmi="3.500000" iscapital="0"/>
+	<city name="Dunnigan" lat="38.885180" lon="-121.969690" population="1416" mmi="3.480000" iscapital="0"/>
+	<city name="El Granada" lat="37.502720" lon="-122.469420" population="5467" mmi="3.470000" iscapital="0"/>
+	<city name="Half Moon Bay" lat="37.463550" lon="-122.428590" population="11324" mmi="3.470000" iscapital="0"/>
+	<city name="Tiburon" lat="37.873540" lon="-122.456640" population="8962" mmi="3.470000" iscapital="0"/>
+	<city name="San Carlos" lat="37.507160" lon="-122.260520" population="28406" mmi="3.450000" iscapital="0"/>
+	<city name="San Ramon" lat="37.779930" lon="-121.978020" population="72148" mmi="3.430000" iscapital="0"/>
+	<city name="Highlands-Baywood Park" lat="37.522720" lon="-122.345060" population="4027" mmi="3.430000" iscapital="0"/>
+	<city name="East Palo Alto" lat="37.468830" lon="-122.141080" population="28155" mmi="3.400000" iscapital="0"/>
+	<city name="West Sacramento" lat="38.580460" lon="-121.530230" population="48744" mmi="3.400000" iscapital="0"/>
+	<city name="Guerneville" lat="38.501860" lon="-122.996110" population="4534" mmi="3.380000" iscapital="0"/>
+	<city name="Woodside" lat="37.429940" lon="-122.253860" population="5287" mmi="3.380000" iscapital="0"/>
+	<city name="San Leandro" lat="37.724930" lon="-122.156080" population="84950" mmi="3.360000" iscapital="0"/>
+	<city name="Antioch" lat="38.004920" lon="-121.805790" population="102372" mmi="3.350000" iscapital="0"/>
+	<city name="North Fair Oaks" lat="37.474380" lon="-122.196630" population="14687" mmi="3.330000" iscapital="0"/>
+	<city name="Sacramento" lat="38.581570" lon="-121.494400" population="466488" mmi="3.330000" iscapital="1"/>
+	<city name="Dublin" lat="37.702150" lon="-121.935790" population="46036" mmi="3.310000" iscapital="0"/>
+	<city name="Atherton" lat="37.461330" lon="-122.197740" population="6914" mmi="3.300000" iscapital="0"/>
+	<city name="San Lorenzo" lat="37.681040" lon="-122.124410" population="23452" mmi="3.300000" iscapital="0"/>
+	<city name="Monte Rio" lat="38.465470" lon="-123.008890" population="1152" mmi="3.290000" iscapital="0"/>
+	<city name="Palo Alto" lat="37.441880" lon="-122.143020" population="64403" mmi="3.290000" iscapital="0"/>
+	<city name="Thornton" lat="38.226030" lon="-121.424670" population="1131" mmi="3.280000" iscapital="0"/>
+	<city name="West Menlo Park" lat="37.433550" lon="-122.203020" population="3659" mmi="3.280000" iscapital="0"/>
+	<city name="Parkway" lat="38.496020" lon="-121.458840" population="14670" mmi="3.270000" iscapital="0"/>
+	<city name="Pleasanton" lat="37.662430" lon="-121.874680" population="70285" mmi="3.270000" iscapital="0"/>
+	<city name="Arbuckle" lat="39.017400" lon="-122.057750" population="3028" mmi="3.250000" iscapital="0"/>
+	<city name="Emerald Lake Hills" lat="37.464660" lon="-122.268020" population="4278" mmi="3.250000" iscapital="0"/>
+	<city name="Ladera" lat="37.399940" lon="-122.198300" population="1426" mmi="3.250000" iscapital="0"/>
+	<city name="Menlo Park" lat="37.453830" lon="-122.182190" population="32026" mmi="3.250000" iscapital="0"/>
+	<city name="Lower Lake" lat="38.910450" lon="-122.610260" population="1294" mmi="3.240000" iscapital="0"/>
+	<city name="Oakley" lat="37.997420" lon="-121.712450" population="35432" mmi="3.240000" iscapital="0"/>
+	<city name="Mountain House" lat="37.783260" lon="-121.542730" population="9675" mmi="3.220000" iscapital="0"/>
+	<city name="Stanford" lat="37.424110" lon="-122.166080" population="13809" mmi="3.220000" iscapital="0"/>
+	<city name="Cherryland" lat="37.679380" lon="-122.103300" population="14728" mmi="3.210000" iscapital="0"/>
+	<city name="Laguna" lat="38.421020" lon="-121.423840" population="46621" mmi="3.200000" iscapital="0"/>
+	<city name="Milpitas" lat="37.428270" lon="-121.906620" population="66790" mmi="3.200000" iscapital="0"/>
+	<city name="Florin" lat="38.496020" lon="-121.408840" population="47513" mmi="3.190000" iscapital="0"/>
+	<city name="Castro Valley" lat="37.694100" lon="-122.086350" population="61388" mmi="3.170000" iscapital="0"/>
+	<city name="Discovery Bay" lat="37.908540" lon="-121.600230" population="13352" mmi="3.170000" iscapital="0"/>
+	<city name="Bethel Island" lat="38.014920" lon="-121.640510" population="2137" mmi="3.160000" iscapital="0"/>
+	<city name="Byron" lat="37.867150" lon="-121.638010" population="1277" mmi="3.160000" iscapital="0"/>
+	<city name="Clearlake" lat="38.958230" lon="-122.626370" population="15250" mmi="3.160000" iscapital="0"/>
+	<city name="Elk Grove" lat="38.408800" lon="-121.371620" population="153015" mmi="3.150000" iscapital="0"/>
+	<city name="Hayward" lat="37.668820" lon="-122.080800" population="144186" mmi="3.150000" iscapital="0"/>
+	<city name="Knightsen" lat="37.968810" lon="-121.668010" population="1568" mmi="3.150000" iscapital="0"/>
+	<city name="Livermore" lat="37.681870" lon="-121.768010" population="80968" mmi="3.150000" iscapital="0"/>
+	<city name="Woodbridge" lat="38.154080" lon="-121.301340" population="3984" mmi="3.150000" iscapital="0"/>
+	<city name="Ashland" lat="37.694650" lon="-122.113850" population="21925" mmi="3.140000" iscapital="0"/>
+	<city name="Lincoln Village" lat="38.005200" lon="-121.328280" population="4381" mmi="3.140000" iscapital="0"/>
+	<city name="Brentwood" lat="37.926870" lon="-121.725770" population="51481" mmi="3.120000" iscapital="0"/>
+	<city name="Country Club" lat="37.968810" lon="-121.340780" population="9379" mmi="3.120000" iscapital="0"/>
+	<city name="Fremont" lat="37.548270" lon="-121.988570" population="214089" mmi="3.100000" iscapital="0"/>
+	<city name="Lodi" lat="38.130200" lon="-121.272450" population="62134" mmi="3.090000" iscapital="0"/>
+	<city name="Rio Linda" lat="38.691010" lon="-121.448570" population="15106" mmi="3.090000" iscapital="0"/>
+	<city name="Elverta" lat="38.713790" lon="-121.462730" population="5492" mmi="3.080000" iscapital="0"/>
+	<city name="La Riviera" lat="38.566850" lon="-121.356900" population="10802" mmi="3.080000" iscapital="0"/>
+	<city name="Galt" lat="38.254640" lon="-121.299950" population="23647" mmi="3.070000" iscapital="0"/>
+	<city name="Rosemont" lat="38.551850" lon="-121.364670" population="22681" mmi="3.070000" iscapital="0"/>
+	<city name="Cloverdale" lat="38.805460" lon="-123.017220" population="8618" mmi="3.050000" iscapital="0"/>
+	<city name="Tracy" lat="37.739650" lon="-121.425220" population="82922" mmi="3.050000" iscapital="0"/>
+	<city name="Arden-Arcade" lat="38.602500" lon="-121.378540" population="92186" mmi="3.050000" iscapital="0"/>
+	<city name="Stockton" lat="37.957700" lon="-121.290780" population="291707" mmi="3.040000" iscapital="0"/>
+	<city name="Collierville" lat="38.214640" lon="-121.268840" population="1934" mmi="3.030000" iscapital="0"/>
+	<city name="Newark" lat="37.529660" lon="-122.040240" population="42573" mmi="3.030000" iscapital="0"/>
+	<city name="August" lat="37.978810" lon="-121.262170" population="8390" mmi="3.020000" iscapital="0"/>
+	<city name="Morada" lat="38.038530" lon="-121.245780" population="3828" mmi="3.010000" iscapital="0"/>
+	<city name="Taft Mosswood" lat="37.913850" lon="-121.283160" population="1530" mmi="3.010000" iscapital="0"/>
+	<city name="Wilton" lat="38.411860" lon="-121.272170" population="5363" mmi="3.000000" iscapital="0"/>
+	<city name="Fairview" lat="37.678540" lon="-122.045800" population="10003" mmi="2.990000" iscapital="0"/>
+	<city name="Kennedy" lat="37.929920" lon="-121.252720" population="3254" mmi="2.990000" iscapital="0"/>
+	<city name="Vineyard" lat="38.464490" lon="-121.346920" population="24836" mmi="2.990000" iscapital="0"/>
+	<city name="French Camp" lat="37.884090" lon="-121.271060" population="3376" mmi="2.980000" iscapital="0"/>
+	<city name="Herald" lat="38.295750" lon="-121.244390" population="1184" mmi="2.980000" iscapital="0"/>
+	<city name="Carmichael" lat="38.617130" lon="-121.328280" population="61762" mmi="2.960000" iscapital="0"/>
+	<city name="Garden Acres" lat="37.963810" lon="-121.229390" population="10648" mmi="2.960000" iscapital="0"/>
+	<city name="North Highlands" lat="38.685740" lon="-121.372170" population="42694" mmi="2.960000" iscapital="0"/>
+	<city name="Rancho Cordova" lat="38.589070" lon="-121.302730" population="64776" mmi="2.950000" iscapital="0"/>
+	<city name="Union City" lat="37.595770" lon="-122.019130" population="69516" mmi="2.950000" iscapital="0"/>
+	<city name="Clearlake Oaks" lat="39.026280" lon="-122.671930" population="2359" mmi="2.940000" iscapital="0"/>
+	<city name="Foothill Farms" lat="38.678770" lon="-121.351140" population="33121" mmi="2.940000" iscapital="0"/>
+	<city name="Lakeport" lat="39.042950" lon="-122.915830" population="4753" mmi="2.940000" iscapital="0"/>
+	<city name="Lathrop" lat="37.822700" lon="-121.276610" population="18023" mmi="2.940000" iscapital="0"/>
+	<city name="Antelope" lat="38.708240" lon="-121.329950" population="45770" mmi="2.880000" iscapital="0"/>
+	<city name="Kelseyville" lat="38.977950" lon="-122.839440" population="3353" mmi="2.870000" iscapital="0"/>
+	<city name="Fair Oaks" lat="38.644630" lon="-121.272170" population="30912" mmi="2.850000" iscapital="0"/>
+	<city name="Gold River" lat="38.626290" lon="-121.246620" population="7912" mmi="2.850000" iscapital="0"/>
+	<city name="Manteca" lat="37.797430" lon="-121.216050" population="67096" mmi="2.830000" iscapital="0"/>
+	<city name="Plumas Lake" lat="39.020730" lon="-121.558020" population="5853" mmi="2.830000" iscapital="0"/>
+	<city name="Lockeford" lat="38.163530" lon="-121.149940" population="3233" mmi="2.820000" iscapital="0"/>
+	<city name="Citrus Heights" lat="38.707120" lon="-121.281060" population="83301" mmi="2.810000" iscapital="0"/>
+	<city name="Soda Bay" lat="39.001010" lon="-122.789160" population="1016" mmi="2.800000" iscapital="0"/>
+	<city name="Orangevale" lat="38.678510" lon="-121.225780" population="33960" mmi="2.790000" iscapital="0"/>
+	<city name="Roseville" lat="38.752120" lon="-121.288010" population="118788" mmi="2.780000" iscapital="0"/>
+	<city name="Clay" lat="38.336020" lon="-121.159390" population="1195" mmi="2.770000" iscapital="0"/>
+	<city name="Linden" lat="38.021310" lon="-121.083830" population="1784" mmi="2.760000" iscapital="0"/>
+	<city name="Dogtown" lat="38.213810" lon="-121.088550" population="2506" mmi="2.730000" iscapital="0"/>
+	<city name="Folsom" lat="38.677960" lon="-121.176060" population="72203" mmi="2.680000" iscapital="0"/>
+	<city name="Sheridan" lat="38.979620" lon="-121.375510" population="1238" mmi="2.660000" iscapital="0"/>
+	<city name="Lincoln" lat="38.891560" lon="-121.293010" population="42819" mmi="2.650000" iscapital="0"/>
+	<city name="Ripon" lat="37.741600" lon="-121.124380" population="14297" mmi="2.650000" iscapital="0"/>
+	<city name="Wheatland" lat="39.009890" lon="-121.423010" population="3456" mmi="2.600000" iscapital="0"/>
+	<city name="Salida" lat="37.705760" lon="-121.084940" population="13722" mmi="2.570000" iscapital="0"/>
+	<city name="Boonville" lat="39.009070" lon="-123.366120" population="1035" mmi="2.510000" iscapital="0"/>
+	<city name="Rancho Murieta" lat="38.501850" lon="-121.094670" population="5488" mmi="2.500000" iscapital="0"/>
+	<city name="Rocklin" lat="38.790730" lon="-121.235780" population="56974" mmi="2.450000" iscapital="0"/>
+	<city name="Granite Bay" lat="38.763230" lon="-121.163840" population="20402" mmi="2.380000" iscapital="0"/>
+	<city name="Loomis" lat="38.821290" lon="-121.193000" population="6430" mmi="2.340000" iscapital="0"/>
+	<city name="Patterson" lat="37.471600" lon="-121.129660" population="20413" mmi="2.340000" iscapital="0"/>
+	<city name="El Dorado Hills" lat="38.685740" lon="-121.082170" population="42108" mmi="2.330000" iscapital="0"/>
+	<city name="Newcastle" lat="38.874070" lon="-121.133280" population="1224" mmi="2.240000" iscapital="0"/>
+	<city name="Auburn" lat="38.896570" lon="-121.076890" population="13330" mmi="2.160000" iscapital="0"/>
+	<city name="North Auburn" lat="38.931290" lon="-121.081890" population="13022" mmi="2.130000" iscapital="0"/>
+	<city name="Sea Ranch" lat="38.715190" lon="-123.454450" population="1305" mmi="2.040000" iscapital="0"/>
+	<structcomment>
+		Overall, the population in this region resides in structures that are highly resistant to earthquake shaking, though some vulnerable structures exist.	</structcomment>
+	<alertcomment>
+			</alertcomment>
+	<comment>
+		<![CDATA[<blockTable style="historyhdrtablestyle" rowHeights="24" colWidths="42,30,25,45,38">
+		   <tr>
+		      <td><para alignment="LEFT" fontName="Helvetica-Bold" fontSize="9">Date (UTC)</para></td>
+		      <td><para alignment="RIGHT" fontName="Helvetica-Bold" fontSize="9">Dist. (km)</para></td>
+		      <td><para alignment="CENTER" fontName="Helvetica-Bold" fontSize="9">Mag.</para></td>
+		      <td><para alignment="CENTER" fontName="Helvetica-Bold" fontSize="9">Max MMI(#)</para></td>
+		      <td><para alignment="RIGHT" fontName="Helvetica-Bold" fontSize="9">Shaking Deaths</para></td>
+		   </tr>
+                 </blockTable>
+                 <blockTable style="historytablestyle" rowHeights="12,12,12" colWidths="42,30,25,45,38">
+                 <tr>
+                  <td><para alignment="LEFT" fontName="Helvetica" fontSize="9">1983-05-02</para></td>
+		  <td><para alignment="RIGHT" fontName="Helvetica" fontSize="9">284</para></td>
+		  <td><para alignment="CENTER" fontName="Helvetica" fontSize="9">5.7</para></td>
+		  <td background="#ff9100"><para alignment="CENTER" fontName="Helvetica" fontSize="9">VIII(1k)</para></td>
+		  <td><para alignment="RIGHT" fontName="Helvetica" fontSize="9">0</para></td>
+		</tr><tr>
+                  <td><para alignment="LEFT" fontName="Helvetica" fontSize="9">1980-01-24</para></td>
+		  <td><para alignment="RIGHT" fontName="Helvetica" fontSize="9">76</para></td>
+		  <td><para alignment="CENTER" fontName="Helvetica" fontSize="9">5.8</para></td>
+		  <td background="#ffc800"><para alignment="CENTER" fontName="Helvetica" fontSize="9">VII(31k)</para></td>
+		  <td><para alignment="RIGHT" fontName="Helvetica" fontSize="9">1</para></td>
+		</tr><tr>
+                  <td><para alignment="LEFT" fontName="Helvetica" fontSize="9">1989-10-18</para></td>
+		  <td><para alignment="RIGHT" fontName="Helvetica" fontSize="9">132</para></td>
+		  <td><para alignment="CENTER" fontName="Helvetica" fontSize="9">6.9</para></td>
+		  <td background="#ff0000"><para alignment="CENTER" fontName="Helvetica" fontSize="9">IX(3k)</para></td>
+		  <td><para alignment="RIGHT" fontName="Helvetica" fontSize="9">62</para></td>
+		</tr></blockTable><para style="commentstyle">Recent earthquakes in this area have caused secondary hazards such as landslides and liquefaction that might have contributed to losses.</para>]]>	</comment>
+	<impact_comment>
+		Red alert level for economic losses.  Extensive damage is probable and the disaster is likely widespread. Estimated economic losses are less than 1% of GDP of the United States. Past events with this alert level have required a national or international level response.#Green alert level for shaking-related fatalities.  There is a low likelihood of casualties.	</impact_comment>
+	<secondary_effects>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		Recent earthquakes in this area have caused secondary hazards such as landslides and liquefaction that might have contributed to losses.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</secondary_effects>
+	<similarevents>
+		<similarevent ref="198305022346"/>
+		<similarevent ref="198001241900"/>
+		<similarevent ref="198910180004"/>
+	</similarevents>
+	<historicevents>
+		<historicevent>
+			<date>1975-08-01T20:20:13Z</date>
+			<total>0</total>
+			<id>197508012020</id>
+			<lon>-121.398000</lon>
+			<depth>5.700000</depth>
+			<maxmmi>8</maxmmi>
+			<exposure>[0, 0, 2704, 1739329, 1711913, 108376, 25763, 3293, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>1</seqno>
+			<hurt>10</hurt>
+			<lat>39.503000</lat>
+			<nmmi>3293</nmmi>
+			<distance>163.051683</distance>
+			<name>"Oroville, California"</name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.800000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1978-10-04T16:42:49Z</date>
+			<total>0</total>
+			<id>197810041642</id>
+			<lon>-118.694000</lon>
+			<depth>8.100000</depth>
+			<maxmmi>6</maxmmi>
+			<exposure>[0, 0, 19, 1489802, 17809, 598, 0, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>2</seqno>
+			<hurt>0</hurt>
+			<lat>37.394000</lat>
+			<nmmi>598</nmmi>
+			<distance>330.694936</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.400000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1979-08-06T17:05:23Z</date>
+			<total>0</total>
+			<id>197908061705</id>
+			<lon>-121.598000</lon>
+			<depth>7.500000</depth>
+			<maxmmi>8</maxmmi>
+			<exposure>[0, 0, 15742, 5485167, 3433037, 340146, 39910, 152, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>3</seqno>
+			<hurt>0</hurt>
+			<lat>37.070000</lat>
+			<nmmi>152</nmmi>
+			<distance>142.451288</distance>
+			<name>"Coyote Lake, California"</name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.700000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1980-01-24T19:00:13Z</date>
+			<total>1</total>
+			<id>198001241900</id>
+			<lon>-121.727000</lon>
+			<depth>15.000000</depth>
+			<maxmmi>7</maxmmi>
+			<exposure>[0, 0, 10054, 4329223, 4582928, 601524, 31393, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>4</seqno>
+			<hurt>44</hurt>
+			<lat>37.713000</lat>
+			<nmmi>31393</nmmi>
+			<distance>76.226583</distance>
+			<name>"Livermore, California"</name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.800000</magnitude>
+			<landslide>0</landslide>
+			<shaking>1</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1980-01-27T02:33:36Z</date>
+			<total>0</total>
+			<id>198001270233</id>
+			<lon>-121.740000</lon>
+			<depth>15.000000</depth>
+			<maxmmi>6</maxmmi>
+			<exposure>[0, 0, 77748, 4916405, 4171904, 370819, 0, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>5</seqno>
+			<hurt>0</hurt>
+			<lat>37.737000</lat>
+			<nmmi>370819</nmmi>
+			<distance>73.488430</distance>
+			<name>"Livermore, California"</name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.800000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1980-05-25T16:33:47Z</date>
+			<total>0</total>
+			<id>198005251633</id>
+			<lon>-118.834000</lon>
+			<depth>11.100000</depth>
+			<maxmmi>9</maxmmi>
+			<exposure>[0, 0, 0, 4356198, 1501859, 73646, 5549, 760, 72]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>6</seqno>
+			<hurt>7</hurt>
+			<lat>37.526000</lat>
+			<nmmi>72</nmmi>
+			<distance>314.734770</distance>
+			<name>"Mammoth Lakes, California"</name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>6.200000</magnitude>
+			<landslide>1</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1980-05-25T16:49:28Z</date>
+			<total>0</total>
+			<id>198005251649</id>
+			<lon>-119.019000</lon>
+			<depth>3.300000</depth>
+			<maxmmi>8</maxmmi>
+			<exposure>[0, 0, 0, 1605745, 159810, 1155, 5165, 16, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>7</seqno>
+			<hurt>0</hurt>
+			<lat>37.550000</lat>
+			<nmmi>16</nmmi>
+			<distance>298.308898</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.900000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1980-05-25T19:44:52Z</date>
+			<total>0</total>
+			<id>198005251944</id>
+			<lon>-118.836000</lon>
+			<depth>3.900000</depth>
+			<maxmmi>7</maxmmi>
+			<exposure>[0, 0, 0, 1539682, 54422, 1204, 2, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>8</seqno>
+			<hurt>3</hurt>
+			<lat>37.377000</lat>
+			<nmmi>2</nmmi>
+			<distance>319.321608</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.900000</magnitude>
+			<landslide>1</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1980-05-25T20:35:50Z</date>
+			<total>0</total>
+			<id>198005252035</id>
+			<lon>-118.955000</lon>
+			<depth>2.300000</depth>
+			<maxmmi>6</maxmmi>
+			<exposure>[0, 0, 0, 1425504, 309871, 5975, 0, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>9</seqno>
+			<hurt>0</hurt>
+			<lat>37.441000</lat>
+			<nmmi>5975</nmmi>
+			<distance>307.148586</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.900000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1980-05-25T20:59:23Z</date>
+			<total>0</total>
+			<id>198005252059</id>
+			<lon>-118.827000</lon>
+			<depth>10.000000</depth>
+			<maxmmi>7</maxmmi>
+			<exposure>[0, 0, 0, 1493630, 13156, 5447, 660, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>10</seqno>
+			<hurt>0</hurt>
+			<lat>37.591000</lat>
+			<nmmi>660</nmmi>
+			<distance>313.510468</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.500000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1980-05-26T12:24:25Z</date>
+			<total>0</total>
+			<id>198005261224</id>
+			<lon>-118.897000</lon>
+			<depth>2.000000</depth>
+			<maxmmi>7</maxmmi>
+			<exposure>[0, 0, 0, 1530841, 21523, 3547, 2475, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>11</seqno>
+			<hurt>0</hurt>
+			<lat>37.577000</lat>
+			<nmmi>2475</nmmi>
+			<distance>307.916552</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.600000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1980-05-26T18:57:56Z</date>
+			<total>0</total>
+			<id>198005261857</id>
+			<lon>-118.895000</lon>
+			<depth>6.000000</depth>
+			<maxmmi>7</maxmmi>
+			<exposure>[0, 0, 0, 1540843, 28664, 4186, 1926, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>12</seqno>
+			<hurt>0</hurt>
+			<lat>37.560000</lat>
+			<nmmi>1926</nmmi>
+			<distance>308.564247</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.700000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1980-05-27T14:50:57Z</date>
+			<total>0</total>
+			<id>198005271450</id>
+			<lon>-118.796000</lon>
+			<depth>0.500000</depth>
+			<maxmmi>8</maxmmi>
+			<exposure>[0, 0, 0, 768180, 753969, 68311, 742, 3, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>13</seqno>
+			<hurt>7</hurt>
+			<lat>37.417000</lat>
+			<nmmi>3</nmmi>
+			<distance>321.338009</distance>
+			<name>"Mammoth Lakes, California"</name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.900000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1980-11-08T10:27:35Z</date>
+			<total>0</total>
+			<id>198011081027</id>
+			<lon>-124.300000</lon>
+			<depth>17.300000</depth>
+			<maxmmi>9</maxmmi>
+			<exposure>[0, 0, 0, 449580, 591224, 29085, 23371, 50917, 16188]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>14</seqno>
+			<hurt>6</hurt>
+			<lat>41.110000</lat>
+			<nmmi>16188</nmmi>
+			<distance>363.319366</distance>
+			<name>"Trinidad, California"</name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>7.300000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1981-09-30T11:53:30Z</date>
+			<total>0</total>
+			<id>198109301153</id>
+			<lon>-118.804000</lon>
+			<depth>15.000000</depth>
+			<maxmmi>7</maxmmi>
+			<exposure>[0, 0, 0, 1538513, 13507, 5542, 591, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>15</seqno>
+			<hurt>0</hurt>
+			<lat>37.547000</lat>
+			<nmmi>591</nmmi>
+			<distance>316.684608</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.600000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1983-05-02T23:42:39Z</date>
+			<total>0</total>
+			<id>198305022342</id>
+			<lon>-120.304000</lon>
+			<depth>10.000000</depth>
+			<maxmmi>9</maxmmi>
+			<exposure>[0, 0, 73014, 16725604, 3322850, 105212, 20267, 19451, 29]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>16</seqno>
+			<hurt>45</hurt>
+			<lat>36.218000</lat>
+			<nmmi>29</nmmi>
+			<distance>284.769324</distance>
+			<name>"Coalinga, California"</name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>6.300000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1983-05-02T23:46:06Z</date>
+			<total>0</total>
+			<id>198305022346</id>
+			<lon>-120.290000</lon>
+			<depth>8.000000</depth>
+			<maxmmi>8</maxmmi>
+			<exposure>[0, 0, 0, 4693289, 1075780, 16472, 12273, 1182, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>17</seqno>
+			<hurt>0</hurt>
+			<lat>36.230000</lat>
+			<nmmi>1182</nmmi>
+			<distance>284.497444</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.700000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1983-07-09T07:40:50Z</date>
+			<total>0</total>
+			<id>198307090740</id>
+			<lon>-120.372000</lon>
+			<depth>1.400000</depth>
+			<maxmmi>7</maxmmi>
+			<exposure>[0, 0, 97702, 5613352, 172835, 7558, 9667, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>18</seqno>
+			<hurt>0</hurt>
+			<lat>36.173000</lat>
+			<nmmi>9667</nmmi>
+			<distance>285.058963</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.100000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1983-07-22T02:39:55Z</date>
+			<total>0</total>
+			<id>198307220239</id>
+			<lon>-120.338000</lon>
+			<depth>7.300000</depth>
+			<maxmmi>7</maxmmi>
+			<exposure>[0, 0, 0, 5323161, 535273, 28021, 1358, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>19</seqno>
+			<hurt>2</hurt>
+			<lat>36.195000</lat>
+			<nmmi>1358</nmmi>
+			<distance>284.932098</distance>
+			<name>"Coalinga, California"</name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.700000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1983-08-24T13:36:32Z</date>
+			<total>0</total>
+			<id>198308241336</id>
+			<lon>-124.620000</lon>
+			<depth>24.300000</depth>
+			<maxmmi>7</maxmmi>
+			<exposure>[0, 4773, 1439486, 272721, 51481, 59578, 1927, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>20</seqno>
+			<hurt>0</hurt>
+			<lat>40.289000</lat>
+			<nmmi>1927</nmmi>
+			<distance>303.729985</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>6.200000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1984-04-24T21:15:20Z</date>
+			<total>0</total>
+			<id>198404242115</id>
+			<lon>-121.708000</lon>
+			<depth>8.800000</depth>
+			<maxmmi>9</maxmmi>
+			<exposure>[0, 0, 3830, 4351138, 5213225, 949963, 574489, 7428, 1]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>21</seqno>
+			<hurt>21</hurt>
+			<lat>37.305000</lat>
+			<nmmi>1</nmmi>
+			<distance>114.743482</distance>
+			<name>"Morgan Hill, California"</name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>6.200000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1984-11-23T18:08:28Z</date>
+			<total>0</total>
+			<id>198411231808</id>
+			<lon>-118.505000</lon>
+			<depth>15.000000</depth>
+			<maxmmi>8</maxmmi>
+			<exposure>[0, 0, 0, 1390326, 9508, 1213, 783, 8421, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>22</seqno>
+			<hurt>0</hurt>
+			<lat>37.339000</lat>
+			<nmmi>8421</nmmi>
+			<distance>348.450359</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.800000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1984-11-23T19:12:34Z</date>
+			<total>0</total>
+			<id>198411231912</id>
+			<lon>-118.641000</lon>
+			<depth>0.000000</depth>
+			<maxmmi>7</maxmmi>
+			<exposure>[0, 0, 0, 1548044, 11674, 7575, 381, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>23</seqno>
+			<hurt>0</hurt>
+			<lat>37.435000</lat>
+			<nmmi>381</nmmi>
+			<distance>333.861817</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.500000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1984-11-26T16:21:50Z</date>
+			<total>0</total>
+			<id>198411261621</id>
+			<lon>-118.756000</lon>
+			<depth>10.000000</depth>
+			<maxmmi>5</maxmmi>
+			<exposure>[0, 0, 62843, 1553040, 17394, 0, 0, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>24</seqno>
+			<hurt>1</hurt>
+			<lat>37.294000</lat>
+			<nmmi>17394</nmmi>
+			<distance>328.976591</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.100000</magnitude>
+			<landslide>1</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1985-08-04T12:01:58Z</date>
+			<total>0</total>
+			<id>198508041201</id>
+			<lon>-120.110000</lon>
+			<depth>15.000000</depth>
+			<maxmmi>9</maxmmi>
+			<exposure>[0, 0, 0, 20158271, 2112537, 60455, 22874, 10648, 713]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>25</seqno>
+			<hurt>6</hurt>
+			<lat>36.135000</lat>
+			<nmmi>713</nmmi>
+			<distance>302.852697</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>6.100000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1986-01-26T19:20:52Z</date>
+			<total>0</total>
+			<id>198601261920</id>
+			<lon>-121.362000</lon>
+			<depth>6.400000</depth>
+			<maxmmi>7</maxmmi>
+			<exposure>[0, 0, 1605, 7725644, 560275, 40186, 2354, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>26</seqno>
+			<hurt>0</hurt>
+			<lat>36.751000</lat>
+			<nmmi>2354</nmmi>
+			<distance>183.530660</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.400000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1986-03-31T11:55:41Z</date>
+			<total>0</total>
+			<id>198603311155</id>
+			<lon>-121.585000</lon>
+			<depth>6.400000</depth>
+			<maxmmi>7</maxmmi>
+			<exposure>[0, 0, 0, 5733428, 4506557, 47951, 117, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>27</seqno>
+			<hurt>6</hurt>
+			<lat>37.526000</lat>
+			<nmmi>117</nmmi>
+			<distance>100.133339</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.600000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1986-07-20T14:29:49Z</date>
+			<total>0</total>
+			<id>198607201429</id>
+			<lon>-118.451000</lon>
+			<depth>15.000000</depth>
+			<maxmmi>8</maxmmi>
+			<exposure>[0, 0, 0, 1399099, 10862, 9513, 560, 9, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>28</seqno>
+			<hurt>0</hurt>
+			<lat>37.498000</lat>
+			<nmmi>9</nmmi>
+			<distance>348.163419</distance>
+			<name>"Chalfant Valley, California (Foreshock)"</name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.800000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1986-07-21T14:42:28Z</date>
+			<total>0</total>
+			<id>198607211442</id>
+			<lon>-118.436000</lon>
+			<depth>9.700000</depth>
+			<maxmmi>8</maxmmi>
+			<exposure>[0, 0, 0, 3906443, 762198, 3792, 7003, 375, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>29</seqno>
+			<hurt>0</hurt>
+			<lat>37.495000</lat>
+			<nmmi>375</nmmi>
+			<distance>349.527248</distance>
+			<name>"Chalfant, California"</name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>6.200000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1986-07-21T14:51:10Z</date>
+			<total>0</total>
+			<id>198607211451</id>
+			<lon>-118.365000</lon>
+			<depth>8.500000</depth>
+			<maxmmi>8</maxmmi>
+			<exposure>[0, 0, 0, 1368920, 10692, 8727, 204, 270, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>30</seqno>
+			<hurt>0</hurt>
+			<lat>37.496000</lat>
+			<nmmi>270</nmmi>
+			<distance>355.562794</distance>
+			<name>"Chalfant Valley, California (Aftershock)"</name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.700000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1986-07-21T22:07:19Z</date>
+			<total>0</total>
+			<id>198607212207</id>
+			<lon>-118.487000</lon>
+			<depth>6.300000</depth>
+			<maxmmi>7</maxmmi>
+			<exposure>[0, 0, 0, 1343883, 18621, 406, 15, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>31</seqno>
+			<hurt>0</hurt>
+			<lat>37.637000</lat>
+			<nmmi>15</nmmi>
+			<distance>341.520607</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.400000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1986-07-31T07:22:43Z</date>
+			<total>0</total>
+			<id>198607310722</id>
+			<lon>-118.401000</lon>
+			<depth>15.000000</depth>
+			<maxmmi>7</maxmmi>
+			<exposure>[0, 0, 13, 1416077, 9071, 9491, 210, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>32</seqno>
+			<hurt>0</hurt>
+			<lat>37.456000</lat>
+			<nmmi>210</nmmi>
+			<distance>353.618714</distance>
+			<name>"Chalfant Valley, California (Aftershock)"</name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.500000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1987-07-31T23:56:58Z</date>
+			<total>0</total>
+			<id>198707312356</id>
+			<lon>-124.196000</lon>
+			<depth>17.700000</depth>
+			<maxmmi>8</maxmmi>
+			<exposure>[0, 0, 0, 8208, 91412, 15289, 3695, 4, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>33</seqno>
+			<hurt>0</hurt>
+			<lat>40.389000</lat>
+			<nmmi>4</nmmi>
+			<distance>290.338376</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>6.000000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1988-06-27T18:43:22Z</date>
+			<total>0</total>
+			<id>198806271843</id>
+			<lon>-121.878000</lon>
+			<depth>13.000000</depth>
+			<maxmmi>8</maxmmi>
+			<exposure>[0, 0, 0, 5353913, 2762269, 1098398, 101785, 6, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>34</seqno>
+			<hurt>0</hurt>
+			<lat>37.130000</lat>
+			<nmmi>6</nmmi>
+			<distance>127.040739</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.700000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1989-08-08T08:13:28Z</date>
+			<total>1</total>
+			<id>198908080813</id>
+			<lon>-121.925000</lon>
+			<depth>15.000000</depth>
+			<maxmmi>7</maxmmi>
+			<exposure>[0, 0, 194, 6299770, 2475174, 623774, 4048, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>35</seqno>
+			<hurt>0</hurt>
+			<lat>37.134000</lat>
+			<nmmi>4048</nmmi>
+			<distance>125.430142</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.400000</magnitude>
+			<landslide>0</landslide>
+			<shaking>1</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1989-10-18T00:04:16Z</date>
+			<total>63</total>
+			<id>198910180004</id>
+			<lon>-121.770000</lon>
+			<depth>11.400000</depth>
+			<maxmmi>9</maxmmi>
+			<exposure>[0, 0, 16813, 3364819, 3020374, 3049717, 2221687, 246853, 2597]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>36</seqno>
+			<hurt>3757</hurt>
+			<lat>37.110000</lat>
+			<nmmi>2597</nmmi>
+			<distance>132.287940</distance>
+			<name>"Loma Prieta, California"</name>
+			<waveheight>0.400000</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>2</tsunami>
+			<magnitude>6.900000</magnitude>
+			<landslide>1</landslide>
+			<shaking>62</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1991-08-17T19:29:41Z</date>
+			<total>0</total>
+			<id>199108171929</id>
+			<lon>-124.110000</lon>
+			<depth>15.800000</depth>
+			<maxmmi>8</maxmmi>
+			<exposure>[0, 0, 0, 3581399, 139629, 15340, 462, 255, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>37</seqno>
+			<hurt>0</hurt>
+			<lat>40.253000</lat>
+			<nmmi>255</nmmi>
+			<distance>273.766781</distance>
+			<name>"Honeydew, California"</name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>6.100000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1992-03-08T03:43:05Z</date>
+			<total>0</total>
+			<id>199203080343</id>
+			<lon>-123.974000</lon>
+			<depth>14.300000</depth>
+			<maxmmi>7</maxmmi>
+			<exposure>[0, 0, 435, 451156, 63713, 2295, 53, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>38</seqno>
+			<hurt>0</hurt>
+			<lat>40.256000</lat>
+			<nmmi>53</nmmi>
+			<distance>267.609792</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.400000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1992-04-25T18:06:06Z</date>
+			<total>0</total>
+			<id>199204251806</id>
+			<lon>-124.068000</lon>
+			<depth>18.500000</depth>
+			<maxmmi>9</maxmmi>
+			<exposure>[0, 0, 0, 672162, 71452, 63468, 32142, 6853, 1779]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>39</seqno>
+			<hurt>98</hurt>
+			<lat>40.350000</lat>
+			<nmmi>1779</nmmi>
+			<distance>280.708370</distance>
+			<name>"Petrolia, California"</name>
+			<waveheight>1.800000</waveheight>
+			<country>the United States</country>
+			<liquefaction>1</liquefaction>
+			<tsunami>1</tsunami>
+			<magnitude>7.200000</magnitude>
+			<landslide>1</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1992-04-26T07:41:44Z</date>
+			<total>0</total>
+			<id>199204260741</id>
+			<lon>-124.254000</lon>
+			<depth>30.700000</depth>
+			<maxmmi>9</maxmmi>
+			<exposure>[0, 0, 0, 2486172, 62759, 59432, 16604, 12567, 1282]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>40</seqno>
+			<hurt>0</hurt>
+			<lat>40.547000</lat>
+			<nmmi>1282</nmmi>
+			<distance>307.640515</distance>
+			<name>"Petrolia, California (Aftershock)"</name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>6.500000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1992-04-26T11:18:27Z</date>
+			<total>0</total>
+			<id>199204261118</id>
+			<lon>-124.407000</lon>
+			<depth>24.500000</depth>
+			<maxmmi>9</maxmmi>
+			<exposure>[0, 0, 0, 2188213, 90346, 49212, 16906, 1285, 40]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>41</seqno>
+			<hurt>0</hurt>
+			<lat>40.425000</lat>
+			<nmmi>40</nmmi>
+			<distance>304.016478</distance>
+			<name>"Petrolia, California (Aftershock)"</name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>6.600000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1994-09-01T15:15:54Z</date>
+			<total>0</total>
+			<id>199409011515</id>
+			<lon>-125.776000</lon>
+			<depth>10.100000</depth>
+			<maxmmi>5</maxmmi>
+			<exposure>[0, 0, 0, 1910045, 133567, 0, 0, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>42</seqno>
+			<hurt>0</hurt>
+			<lat>40.381000</lat>
+			<nmmi>133567</nmmi>
+			<distance>382.498027</distance>
+			<name>"Eureka, California"</name>
+			<waveheight>0.070000</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>7.000000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1994-09-12T12:23:43Z</date>
+			<total>0</total>
+			<id>199409121223</id>
+			<lon>-119.713000</lon>
+			<depth>4.600000</depth>
+			<maxmmi>8</maxmmi>
+			<exposure>[0, 0, 0, 3191774, 470720, 50768, 9902, 14005, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>43</seqno>
+			<hurt>0</hurt>
+			<lat>38.860000</lat>
+			<nmmi>14005</nmmi>
+			<distance>236.882449</distance>
+			<name>"Lake Tahoe, Nevada"</name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.900000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1994-12-26T14:10:31Z</date>
+			<total>0</total>
+			<id>199412261410</id>
+			<lon>-124.040000</lon>
+			<depth>25.900000</depth>
+			<maxmmi>7</maxmmi>
+			<exposure>[0, 11, 308448, 63747, 13637, 19663, 84521, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>44</seqno>
+			<hurt>0</hurt>
+			<lat>40.714000</lat>
+			<nmmi>84521</nmmi>
+			<distance>314.231411</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.500000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1995-02-19T04:03:19Z</date>
+			<total>0</total>
+			<id>199502190403</id>
+			<lon>-125.582000</lon>
+			<depth>19.800000</depth>
+			<maxmmi>5</maxmmi>
+			<exposure>[0, 0, 0, 748083, 97346, 0, 0, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>45</seqno>
+			<hurt>0</hurt>
+			<lat>40.526000</lat>
+			<nmmi>97346</nmmi>
+			<distance>380.108398</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>6.600000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1995-12-28T18:27:59Z</date>
+			<total>0</total>
+			<id>199512281827</id>
+			<lon>-119.549000</lon>
+			<depth>5.000000</depth>
+			<maxmmi>7</maxmmi>
+			<exposure>[0, 0, 0, 3113598, 171032, 15732, 1820, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>46</seqno>
+			<hurt>0</hurt>
+			<lat>38.777000</lat>
+			<nmmi>1820</nmmi>
+			<distance>248.189912</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.500000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1997-01-22T07:17:18Z</date>
+			<total>0</total>
+			<id>199701220717</id>
+			<lon>-124.293000</lon>
+			<depth>15.000000</depth>
+			<maxmmi>7</maxmmi>
+			<exposure>[0, 0, 0, 293566, 100418, 387, 151, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>47</seqno>
+			<hurt>0</hurt>
+			<lat>40.208000</lat>
+			<nmmi>151</nmmi>
+			<distance>279.019884</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.700000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1998-08-12T14:10:26Z</date>
+			<total>0</total>
+			<id>199808121410</id>
+			<lon>-121.525000</lon>
+			<depth>8.800000</depth>
+			<maxmmi>7</maxmmi>
+			<exposure>[0, 0, 48449, 8274185, 494495, 158570, 1148, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>48</seqno>
+			<hurt>2</hurt>
+			<lat>36.677000</lat>
+			<nmmi>1148</nmmi>
+			<distance>185.034695</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.200000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>1999-05-15T13:22:12Z</date>
+			<total>0</total>
+			<id>199905151322</id>
+			<lon>-118.802000</lon>
+			<depth>0.800000</depth>
+			<maxmmi>7</maxmmi>
+			<exposure>[0, 0, 278, 1872138, 20657, 1210, 4, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>49</seqno>
+			<hurt>0</hurt>
+			<lat>37.450000</lat>
+			<nmmi>4</nmmi>
+			<distance>319.765513</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.500000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>2000-09-03T08:36:30Z</date>
+			<total>0</total>
+			<id>200009030836</id>
+			<lon>-122.413000</lon>
+			<depth>10.000000</depth>
+			<maxmmi>6</maxmmi>
+			<exposure>[0, 0, 0, 5877078, 1202152, 76662, 0, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>50</seqno>
+			<hurt>41</hurt>
+			<lat>38.379000</lat>
+			<nmmi>76662</nmmi>
+			<distance>19.691701</distance>
+			<name> </name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>5.000000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+		<historicevent>
+			<date>2003-12-22T19:15:58Z</date>
+			<total>2</total>
+			<id>200312221915</id>
+			<lon>-121.070000</lon>
+			<depth>16.000000</depth>
+			<maxmmi>7</maxmmi>
+			<exposure>[0, 0, 15905531, 2976377, 104763, 7711, 213, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>51</seqno>
+			<hurt>40</hurt>
+			<lat>35.620000</lat>
+			<nmmi>213</nmmi>
+			<distance>309.314977</distance>
+			<name>"San Simeon, California"</name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>1</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>6.600000</magnitude>
+			<landslide>1</landslide>
+			<shaking>2</shaking>
+		</historicevent>
+		<historicevent>
+			<date>2004-09-28T17:15:24Z</date>
+			<total>0</total>
+			<id>200409281715</id>
+			<lon>-120.320000</lon>
+			<depth>4.800000</depth>
+			<maxmmi>7</maxmmi>
+			<exposure>[0, 0, 28, 1284823, 164080, 2567, 160, 0, 0]</exposure>
+			<ccode>US</ccode>
+			<fire>0</fire>
+			<seqno>52</seqno>
+			<hurt>0</hurt>
+			<lat>35.750000</lat>
+			<nmmi>160</nmmi>
+			<distance>326.538954</distance>
+			<name>"Parkfield, California"</name>
+			<waveheight>nan</waveheight>
+			<country>the United States</country>
+			<liquefaction>0</liquefaction>
+			<tsunami>0</tsunami>
+			<magnitude>6.000000</magnitude>
+			<landslide>0</landslide>
+			<shaking>0</shaking>
+		</historicevent>
+	</historicevents>
+</pager>

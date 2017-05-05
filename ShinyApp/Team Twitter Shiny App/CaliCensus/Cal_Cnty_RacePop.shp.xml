@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>REQUIRED: The name of an organization or individual that developed the data set.</origin>
+				<pubdate>REQUIRED: The date when the data set is published or otherwise made available for release.</pubdate>
+				<title Sync="TRUE">Cal_Cnty_RacePop</title>
+				<geoform Sync="TRUE">vector digital data</geoform>
+				<onlink>\\IGSWMCWNWS01134\C\Jeff\DataPortal\BlockShp\Cal_Block_PopRace.shp</onlink>
+				<ftname Sync="TRUE">Cal_Cnty_RacePop</ftname></citeinfo>
+		</citation>
+		<descript>
+			<abstract>This is a shapefile of all California Counties with 2010 Census detailed population data (Census table P3). The true field headings for the Census data can be found in the metadata under attributes as the ones in the table can be abbreviated or truncated.</abstract>
+			<purpose>Demographic analyses for California</purpose>
+			<langdata Sync="TRUE">en</langdata></descript>
+		<timeperd>
+			<timeinfo>
+				<sngdate>
+					<caldate>REQUIRED: The year (and optionally month, or month and day) for which the data set corresponds to the ground.</caldate>
+				</sngdate>
+			</timeinfo>
+			<current>REQUIRED: The basis on which the time period of content information is determined.</current>
+		</timeperd>
+		<status>
+			<progress>REQUIRED: The state of the data set.</progress>
+			<update>REQUIRED: The frequency with which changes and additions are made to the data set after the initial data set is completed.</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc Sync="TRUE">-124.482003</westbc>
+				<eastbc Sync="TRUE">-114.131211</eastbc>
+				<northbc Sync="TRUE">42.009517</northbc>
+				<southbc Sync="TRUE">32.528832</southbc>
+			</bounding>
+			<lboundng><leftbc Sync="TRUE">-124.482003</leftbc><rightbc Sync="TRUE">-114.131211</rightbc><bottombc Sync="TRUE">32.528832</bottombc><topbc Sync="TRUE">42.009517</topbc></lboundng></spdom>
+		<keywords>
+			<theme>
+				<themekt>REQUIRED: Reference to a formally registered thesaurus or a similar authoritative source of theme keywords.</themekt>
+				<themekey>REQUIRED: Common-use word or phrase used to describe the subject of the data set.</themekey>
+			</theme>
+		</keywords>
+		<accconst>Publically Available</accconst>
+		<useconst>Publically Available</useconst>
+		<native Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcCatalog 9.3.1.1850</native>
+		<natvform Sync="TRUE">Shapefile</natvform></idinfo>
+	<spdoinfo>
+		<direct Sync="TRUE">Vector</direct>
+		<ptvctinf>
+			<sdtsterm Name="Cal_Cnty_RacePop">
+				<sdtstype Sync="TRUE">G-polygon</sdtstype>
+				<ptvctcnt Sync="TRUE">58</ptvctcnt>
+			</sdtsterm>
+			<esriterm Name="Cal_Cnty_RacePop"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom Sync="TRUE">Polygon</efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">58</efeacnt><spindex Sync="TRUE">TRUE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm></ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<geograph>
+				<latres Sync="TRUE">0.000000</latres>
+				<longres Sync="TRUE">0.000000</longres>
+				<geogunit Sync="TRUE">Decimal degrees</geogunit>
+			</geograph>
+			<geodetic>
+				<horizdn Sync="TRUE">North American Datum of 1983</horizdn>
+				<ellips Sync="TRUE">Geodetic Reference System 80</ellips>
+				<semiaxis Sync="TRUE">6378137.000000</semiaxis>
+				<denflat Sync="TRUE">298.257222</denflat>
+			</geodetic>
+			<cordsysn><geogcsn Sync="TRUE">GCS_North_American_1983</geogcsn></cordsysn></horizsys>
+	</spref>
+	<eainfo>
+		<detailed Name="Cal_Cnty_RacePop">
+			<enttyp>
+				<enttypl Sync="TRUE">Cal_Cnty_RacePop</enttypl>
+				<enttypt Sync="TRUE">Feature Class</enttypt><enttypc Sync="TRUE">58</enttypc></enttyp>
+			<attr>
+				<attrlabl>FID</attrlabl>
+				<attrdef>Internal feature number.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">FID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl>Shape</attrlabl>
+				<attrdef>Feature geometry.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Coordinates defining the features.</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">Shape</attalias><attrtype Sync="TRUE">Geometry</attrtype><attwidth Sync="TRUE">0</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl>STATEFP10</attrlabl>
+				<attalias Sync="TRUE">STATEFP10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">2</attwidth></attr>
+			<attr>
+				<attrlabl>COUNTYFP10</attrlabl>
+				<attalias Sync="TRUE">COUNTYFP10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">3</attwidth></attr>
+			<attr><attrlabl Sync="TRUE">COUNTYNS10</attrlabl><attalias Sync="TRUE">COUNTYNS10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">8</attwidth></attr><attr>
+				<attrlabl>GEOID10</attrlabl>
+				<attalias Sync="TRUE">GEOID10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">5</attwidth></attr>
+			<attr>
+				<attrlabl>NAME10</attrlabl>
+				<attalias Sync="TRUE">NAME10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">100</attwidth></attr>
+			<attr><attrlabl Sync="TRUE">NAMELSAD10</attrlabl><attalias Sync="TRUE">NAMELSAD10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">100</attwidth></attr><attr><attrlabl Sync="TRUE">LSAD10</attrlabl><attalias Sync="TRUE">LSAD10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">2</attwidth></attr><attr><attrlabl Sync="TRUE">CLASSFP10</attrlabl><attalias Sync="TRUE">CLASSFP10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">2</attwidth></attr><attr>
+				<attrlabl>MTFCC10</attrlabl>
+				<attalias Sync="TRUE">MTFCC10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">5</attwidth></attr>
+			<attr><attrlabl Sync="TRUE">CSAFP10</attrlabl><attalias Sync="TRUE">CSAFP10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">3</attwidth></attr><attr><attrlabl Sync="TRUE">CBSAFP10</attrlabl><attalias Sync="TRUE">CBSAFP10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">5</attwidth></attr><attr><attrlabl Sync="TRUE">METDIVFP10</attrlabl><attalias Sync="TRUE">METDIVFP10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">5</attwidth></attr><attr>
+				<attrlabl>FUNCSTAT10</attrlabl>
+				<attalias Sync="TRUE">FUNCSTAT10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">1</attwidth></attr>
+			<attr>
+				<attrlabl>ALAND10</attrlabl>
+				<attalias Sync="TRUE">ALAND10</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">14</attwidth></attr>
+			<attr>
+				<attrlabl>AWATER10</attrlabl>
+				<attalias Sync="TRUE">AWATER10</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">14</attwidth></attr>
+			<attr>
+				<attrlabl>INTPTLAT10</attrlabl>
+				<attalias Sync="TRUE">INTPTLAT10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">11</attwidth></attr>
+			<attr>
+				<attrlabl>INTPTLON10</attrlabl>
+				<attalias Sync="TRUE">INTPTLON10</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">12</attwidth></attr>
+			<attr>
+				<attrlabl>Total</attrlabl>
+				<attrdef>Total</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">Total</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>One_Race</attrlabl>
+				<attrdef>Population of one race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">One_Race</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>White</attrlabl>
+				<attrdef>White alone</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">White</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>AfrAmr</attrlabl>
+				<attrdef>Black or African American alone</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">AfrAmr</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>Pac_Isl</attrlabl>
+				<attrdef>American Indian and Alaska Native alone</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">Pac_Isl</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>Native</attrlabl>
+				<attrdef>Asian alone</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">Native</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>Asian</attrlabl>
+				<attrdef>Native Haiwaiian and Other Pacific Islander alone</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">Asian</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>Other_Race</attrlabl>
+				<attrdef>Some Other Race alone</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">Other_Race</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>TwoOrMore</attrlabl>
+				<attrdef>Two or More Races</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">TwoOrMore</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>Two_Races</attrlabl>
+				<attrdef>Population of two Races</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">Two_Races</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WhtAfrAmer</attrlabl>
+				<attrdef>White; Black or African American</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WhtAfrAmer</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WhtNative</attrlabl>
+				<attrdef>White; American Indian and Alaska Native</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WhtNative</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WhtAsian</attrlabl>
+				<attrdef>White; Asian</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WhtAsian</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WhtPacIsl</attrlabl>
+				<attrdef>White; Native Hawaiian and Other Pacific Islander</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WhtPacIsl</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WhtOther</attrlabl>
+				<attrdef>White; Some other race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WhtOther</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>AfrAmrNtv</attrlabl>
+				<attrdef>Black or African American; American Indian and Alaska Native</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">AfrAmrNtv</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>AfrAmrAsn</attrlabl>
+				<attrdef>Black or African American; Asian</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">AfrAmrAsn</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>AfrAmrPacI</attrlabl>
+				<attrdef>Black or African American; Native Hawaiian and Other Pacific Islander</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">AfrAmrPacI</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>AfrAmrOthe</attrlabl>
+				<attrdef>Black or African American; Some Other Race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">AfrAmrOthe</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>NtvAsn</attrlabl>
+				<attrdef>American Indian and Alaska Native; Asian</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">NtvAsn</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>NtvPacIsl</attrlabl>
+				<attrdef>American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">NtvPacIsl</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>NtvOther</attrlabl>
+				<attrdef>American Indian and Alaska Native; Some Other Race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">NtvOther</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>AsnPacIsl</attrlabl>
+				<attrdef>Asian; Native Hawaiian and Other Pacific Islander</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">AsnPacIsl</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>AsnOther</attrlabl>
+				<attrdef>Asian; Some Other Race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">AsnOther</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>PacIslOthe</attrlabl>
+				<attrdef>Native Hawaiian and Other Pacific Islander; Some Other Race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">PacIslOthe</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>Three</attrlabl>
+				<attrdef>Population of three races</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">Three</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WhAfAmNtv</attrlabl>
+				<attrdef>White; Black or African American; American Indian and Alaska Native</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WhAfAmNtv</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WhAfAmAsn</attrlabl>
+				<attrdef>White; Black or African American; Asian</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WhAfAmAsn</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WhAfAmPcIs</attrlabl>
+				<attrdef>White; Balck or African American; Native Hawaiian and Other Pacific Islander</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WhAfAmPcIs</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WhAfAmOth</attrlabl>
+				<attrdef>White; Black or African American; Some Other Race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WhAfAmOth</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WhNtvAsn</attrlabl>
+				<attrdef>White; American Indian and Alaska Native; Asian</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WhNtvAsn</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WhNtvPcIs</attrlabl>
+				<attrdef>White; American Indian and Alaska Native; Native Hawaiian and Pacific Islander</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WhNtvPcIs</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WhNtvOth</attrlabl>
+				<attrdef>White; American Indian and Alaska Native; Some Other Race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WhNtvOth</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WhtAsnPcIs</attrlabl>
+				<attrdef>White; Asian; Native Hawaiian and Other Pacific Islander</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WhtAsnPcIs</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WhAsnOth</attrlabl>
+				<attrdef>White; Asian; Some Other Race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WhAsnOth</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WhPcIsOth</attrlabl>
+				<attrdef>White; Native Hawaiian and Other Pacific Islander; Some Other Race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WhPcIsOth</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>AfAmNtvAsn</attrlabl>
+				<attrdef>Black or African American; American Indian and Alaska Native; Asian</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">AfAmNtvAsn</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>AfAmNtvPcI</attrlabl>
+				<attrdef>Black or African American; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">AfAmNtvPcI</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>AfAmNtvOth</attrlabl>
+				<attrdef>Black or African American; American Indian and Alaska Native; Some other race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">AfAmNtvOth</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>AfAmAsnPcI</attrlabl>
+				<attrdef>Blackor African American; Asian; Native Hawaiian and Other Pacific Islander</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">AfAmAsnPcI</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>AfAmAsnOth</attrlabl>
+				<attrdef>Black or African American; Asian; Some other race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">AfAmAsnOth</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>AfAmPcIsOt</attrlabl>
+				<attrdef>Black or African American; Native Hawaiian and Other Pacific Islander; Some Other Race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">AfAmPcIsOt</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>NtvAsnPcIs</attrlabl>
+				<attrdef>American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">NtvAsnPcIs</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>NtvAsnOth</attrlabl>
+				<attrdef>American Indian and Alaska Native; Asian; Soem Other Race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">NtvAsnOth</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>NtvPcIsOth</attrlabl>
+				<attrdef>American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander; Some Other Race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">NtvPcIsOth</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>AsnPcIsOth</attrlabl>
+				<attrdef>Asian; Native Haswaiian and Other Pacfic Islander; Some Other Race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">AsnPcIsOth</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>Four</attrlabl>
+				<attrdef>Population of four races</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">Four</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WAfAmNtAs</attrlabl>
+				<attrdef>White; Black or African American; AMerican Indian and Alaska Native; Asian</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WAfAmNtAs</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WAfAmNtvPI</attrlabl>
+				<attrdef>White; Black or African American; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WAfAmNtvPI</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WAfAmNtvOt</attrlabl>
+				<attrdef>White; Black or African American; American Indian and Alaska Native; Some other Race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WAfAmNtvOt</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WAfAmAsPcI</attrlabl>
+				<attrdef>White; Black or African American; Asian; Native Hawaiian and Other Pacific Islander</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WAfAmAsPcI</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WAfAmAsOth</attrlabl>
+				<attrdef>White; Black or African American; Asian; Some other race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WAfAmAsOth</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WAfAmPcIsO</attrlabl>
+				<attrdef>White; Black or African American; Native Hawaiian and Other Pacific Islander; Some other race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WAfAmPcIsO</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WNtvAsPcIs</attrlabl>
+				<attrdef>White; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WNtvAsPcIs</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WNtvAsOth</attrlabl>
+				<attrdef>White; American Indian and Alaska Native; Asian; Some other race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WNtvAsOth</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WNtvAsPc_1</attrlabl>
+				<attrdef>White; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WNtvAsPc_1</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WAsPcIsOth</attrlabl>
+				<attrdef>White; Asian; Native Hawaiian and Other Pacific Islander; Some other race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WAsPcIsOth</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr><attrlabl Sync="TRUE">AfAmNtvP_1</attrlabl><attalias Sync="TRUE">AfAmNtvP_1</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr><attr>
+				<attrlabl>AfAmNtvAsO</attrlabl>
+				<attrdef>Black or African American; American Indian and Alaska Native; Asian; Some Other Race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">AfAmNtvAsO</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>AfAmNtvPiO</attrlabl>
+				<attrdef>Black or African American; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander; Some other race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">AfAmNtvPiO</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>AfAmAsPiO</attrlabl>
+				<attrdef>Black or African American; Asian; Native Hawaiian and Other Pacific Islander; Some other race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">AfAmAsPiO</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>NtvAsPiO</attrlabl>
+				<attrdef>American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander; Some other race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">NtvAsPiO</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>Five</attrlabl>
+				<attrdef>Population of five races</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">Five</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WAfANtAsPi</attrlabl>
+				<attrdef>White; Black or African American; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WAfANtAsPi</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WAfANtAsO</attrlabl>
+				<attrdef>White; Black or African American; American Indian and Alaska Native; Asian; Some Other Race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WAfANtAsO</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WAfANtPiO</attrlabl>
+				<attrdef>White; Black or African American; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander; Some other race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WAfANtPiO</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WAfAAsPiO</attrlabl>
+				<attrdef>White; Black or African American; Asian; Native Hawaiian and Other Pacific Islander; Some other race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WAfAAsPiO</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WNtAsPiO</attrlabl>
+				<attrdef>White; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander; Some other race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WNtAsPiO</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>AfANtAsPiO</attrlabl>
+				<attrdef>Black or African American; American Indian and Alaska Native; Native Hawaiian and Other Pacific Islander; Some Other Race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">AfANtAsPiO</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>Six</attrlabl>
+				<attrdef>Population of six races</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">Six</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+			<attr>
+				<attrlabl>WAfNtAsPiO</attrlabl>
+				<attrdef>White; Black or African American; American Indian and Alaska Native; Asian; Native Hawaiian and Other Pacific Islander; Some Other Race</attrdef>
+				<attrdefs>Census Table P3</attrdefs>
+				<attalias Sync="TRUE">WAfNtAsPiO</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">6</atnumdec></attr>
+		</detailed>
+	</eainfo>
+	<distinfo>
+		<resdesc>Downloadable Data</resdesc>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<transize>652.229</transize>
+					<dssize Sync="TRUE">3.730</dssize></digtinfo>
+			</digform>
+		</stdorder>
+	</distinfo>
+	<metainfo>
+		<metd Sync="TRUE">20110526</metd>
+		<metc>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>REQUIRED: The organization responsible for the metadata information.</cntorg>
+					<cntper>REQUIRED: The person responsible for the metadata information.</cntper>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>REQUIRED: The mailing and/or physical address for the organization or individual.</addrtype>
+					<city>REQUIRED: The city of the address.</city>
+					<state>REQUIRED: The state or province of the address.</state>
+					<postal>REQUIRED: The ZIP or other postal code of the address.</postal>
+				</cntaddr>
+				<cntvoice>REQUIRED: The telephone number by which individuals can speak to the organization or individual.</cntvoice>
+			</cntinfo>
+		</metc>
+		<metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+		<mettc Sync="TRUE">local time</mettc>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+		<langmeta Sync="TRUE">en</langmeta><metextns><onlink Sync="TRUE">http://www.esri.com/metadata/esriprof80.html</onlink><metprof Sync="TRUE">ESRI Metadata Profile</metprof></metextns></metainfo>
+	<Esri><CreaDate>20170502</CreaDate><CreaTime>16001800</CreaTime><SyncOnce>FALSE</SyncOnce><SyncDate>20110526</SyncDate><SyncTime>13021200</SyncTime><ModDate>20110526</ModDate><ModTime>13021200</ModTime><ArcGISFormat>1.0</ArcGISFormat></Esri><dataqual><lineage><procstep><procdesc Sync="TRUE">Metadata imported.</procdesc><srcused Sync="TRUE">C:\Temp\xmlBC.tmp</srcused><procdate Sync="TRUE">20110526</procdate><proctime Sync="TRUE">12583900</proctime></procstep></lineage></dataqual><dataIdInfo><envirDesc Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcCatalog 9.3.1.1850</envirDesc><dataLang><languageCode Sync="TRUE" value="en"></languageCode></dataLang><idCitation><resTitle Sync="TRUE">Cal_Cnty_RacePop</resTitle><presForm><PresFormCd Sync="TRUE" value="005"></PresFormCd></presForm></idCitation><spatRpType><SpatRepTypCd Sync="TRUE" value="001"></SpatRepTypCd></spatRpType><dataExt><geoEle><GeoBndBox esriExtentType="native"><westBL Sync="TRUE">-124.482003</westBL><eastBL Sync="TRUE">-114.131211</eastBL><northBL Sync="TRUE">42.009517</northBL><southBL Sync="TRUE">32.528832</southBL><exTypeCode Sync="TRUE">1</exTypeCode></GeoBndBox></geoEle></dataExt><geoBox esriExtentType="decdegrees"><westBL Sync="TRUE">-124.482003</westBL><eastBL Sync="TRUE">-114.131211</eastBL><northBL Sync="TRUE">42.009517</northBL><southBL Sync="TRUE">32.528832</southBL><exTypeCode Sync="TRUE">1</exTypeCode></geoBox></dataIdInfo><mdLang><languageCode Sync="TRUE" value="en"></languageCode></mdLang><mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName><mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer><mdChar><CharSetCd Sync="TRUE" value="004"></CharSetCd></mdChar><mdHrLv><ScopeCd Sync="TRUE" value="005"></ScopeCd></mdHrLv><mdHrLvName Sync="TRUE">dataset</mdHrLvName><distInfo><distributor><distorTran><onLineSrc><orDesc Sync="TRUE">002</orDesc><linkage Sync="TRUE">file://\\IGSWMCWNWS01134\C\Jeff\DataPortal\CountyShp\Cal_Cnty_RacePop.shp</linkage><protocol Sync="TRUE">Local Area Network</protocol></onLineSrc><transSize Sync="TRUE">3.730</transSize></distorTran><distorFormat><formatName Sync="TRUE">Shapefile</formatName></distorFormat></distributor></distInfo><refSysInfo><RefSystem><refSysID><identCode Sync="TRUE">GCS_North_American_1983</identCode></refSysID></RefSystem></refSysInfo><spatRepInfo><VectSpatRep><topLvl><TopoLevCd Sync="TRUE" value="001"></TopoLevCd></topLvl><geometObjs Name="Cal_Cnty_RacePop"><geoObjTyp><GeoObjTypCd Sync="TRUE" value="001"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">58</geoObjCnt></geometObjs></VectSpatRep></spatRepInfo><mdDateSt Sync="TRUE">20110526</mdDateSt></metadata>
