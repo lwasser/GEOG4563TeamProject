@@ -173,8 +173,8 @@ a total of 3000 tweets. These final tweets were used in our analysis.
 
 # Results
 
-URL: https://maxrlnd.shinyapps.io/teamtwitter/
-
+ShinyApp online: https://maxrlnd.shinyapps.io/teamtwitter/
+Github for data: https://github.com/RobinsonK/GEOG4563TeamProject
 Through the process of our data exploration we discovered a few interesting links
 and insights. First of all being that twitter data in incredibly messy, we were
 lucky to be able to obtain an already clean and prepped dataset, however it 
@@ -200,14 +200,17 @@ an epicenter.
 
 
 
+# Citations
 
+Project EPIC, CU Boulder, US National Science Foundation , Grants IIS-0546315 & IIS-0910586
 
+M6 South Napa, California Earthquake - August 24, 2014. Rep. N.p.: n.p., n.d. Print. 
 
+Burks, L., M. Miller, and R. Zadeh. "RAPID ESTIMATE OF GROUND SHAKING INTENSITY BY COMBINING SIMPLE EARTHQUAKE CHARACTERISTICS WITH TWEETS." Tenth U.S. National Conference on Earthquake Engineering (n.d.): n. pag. Web.
 
+Gu, Yiming, Zhen Qian, and Feng Chen. "From Twitter to Detector: Real-time Traffic Incident Detection Using Social Media Data." Transportation Research (2016): n. pag. Web. 
 
-
-
-
+Earle, Paul S., Daniel C. Bowden, and Michelle Guy. "Twitter Earthquake Detection: Earthquake Monitoring in a Social World." ANNALS OF GEOPHYSICS 54.6 (2011): n. pag. Web. 
 
 
 
