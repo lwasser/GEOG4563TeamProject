@@ -1,6 +1,6 @@
 knitr::opts_chunk$set(echo = TRUE)
 options(stringsAsFactors = FALSE)
-#setwd("~/GitHub/GEOG4563TeamProject/playingwithShiny/MaxShiny")
+# Load all libraries required
 library(devtools)
 library(leaflet)
 library(dplyr)

@@ -1,4 +1,4 @@
-
+# This function runs the support script in order to load in data and run processing. 
 source("load.R", local = TRUE)
 
 
